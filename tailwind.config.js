@@ -6,11 +6,15 @@ module.exports = {
   theme: {
     extend: {
       "colors": {
-        // Ici vos couleurs exportées de Figma
+        "sombre": "#1d1d1b",
+        "blanc": "#ffffff",
+        "accent": "#ff0000"
       },
       "fontFamily": {
-        // Ici vos familles de polices exportées de Figma
-        // Ne pas oublier de les charger dans '/index.html' !
+        "cairo": "Cairo",
+        "210": "supersize-bk",
+        "210-d": "supersize-bk-d",
+        "210-box": "supersize-bk-box",
       },
     },
 
