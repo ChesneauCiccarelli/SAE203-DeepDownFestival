@@ -40,13 +40,13 @@
           </router-link>
         </div>
         <div class="flex gap-8 flex-auto items-center justify-center">
-          <router-link to="/programmation">
+          <router-link to="/festival">
             <p class="font-210-box italic text-3xl text-sombre">LE FESTIVAL</p>
           </router-link>
           <router-link to="/programmation">
             <p class="font-210-box italic text-3xl text-sombre">PROGRAMME</p>
           </router-link>
-          <router-link to="/programmation">
+          <router-link to="/artistes">
             <p class="font-210-box italic text-3xl text-sombre">ARTISTES</p>
           </router-link>
         </div>
