@@ -1,7 +1,7 @@
 <template>
   <header>
     <Menu>
-      <div class="flex">
+      <div class="flex mb-9 md:hidden m-[5%]">
         <div class="flex-auto">
           <router-link to="/">
             <img class="flex-auto h-[50px] w-[50px]" src="../public/icons/LogoDDBlanc.jpg" alt="Logo du festival Deep Down" >
@@ -10,7 +10,7 @@
         <MenuButton> <MenuIcon class="inline-block h-[50px] w-[50px]" /><span class="sr-only">Menu</span> </MenuButton>
       </div>
 
-      <transition
+      <transition class="md:hidden"
         enter-active-class="transition duration-1000 ease-out"
         enter-from-class="transform -translate-x-full"
         enter-to-class="transform translate-x-0"
@@ -18,21 +18,40 @@
         leave-from-class="transform translate-0"
         leave-to-class="transform -translate-x-full"
       >
-        <MenuItems class="flex flex-col gap-[30px] my-[50px] items-center">
-          <MenuItem class="font-210-box italic text-3xl" v-slot="{ active }">
-            <router-link to="/festival" :class="{ 'bg-blue-500': active }"> LE FESTIVAL </router-link>
+        <MenuItems class="flex flex-col gap-[30px] my-[50px] items-center">     
+          <MenuItem class="font-210-box italic text-3xl">
+            <router-link to="/festival"> LE FESTIVAL </router-link>
           </MenuItem>
-          <MenuItem class="font-210-box italic text-3xl" v-slot="{ active }">
-            <router-link to="/programmation" :class="{ 'bg-blue-500 ring-2': active }">PROGRAMME </router-link>
+          <MenuItem class="font-210-box italic text-3xl">
+            <router-link to="/programmation">PROGRAMME </router-link>
           </MenuItem>
-          <MenuItem class="font-210-box italic text-3xl" v-slot="{ active }">
-            <router-link to="/artistes" :class="{ 'bg-blue-500 ring-2': active }">ARTISTES</router-link
-            >
+          <MenuItem class="font-210-box italic text-3xl">
+            <router-link to="/artistes">ARTISTES</router-link>
           </MenuItem>
           <DDbas/>
         </MenuItems>
       </transition>
     </Menu>
+
+    <nav class="hidden md:flex bg-white p-5 rounded-br-3xl rounded-bl-3xl">
+        <div class="mr-[2%]">
+          <router-link to="/">
+            <img class="flex-auto h-[50px] w-[50px]" src="../public/icons/LogoDDBlanc.jpg" alt="Logo du festival Deep Down" >
+          </router-link>
+        </div>
+        <div class="flex gap-8 flex-auto items-center justify-center">
+          <router-link to="/programmation">
+            <p class="font-210-box italic text-3xl text-sombre">LE FESTIVAL</p>
+          </router-link>
+          <router-link to="/programmation">
+            <p class="font-210-box italic text-3xl text-sombre">PROGRAMME</p>
+          </router-link>
+          <router-link to="/programmation">
+            <p class="font-210-box italic text-3xl text-sombre">ARTISTES</p>
+          </router-link>
+        </div>
+    </nav>
+
   </header>
 
 

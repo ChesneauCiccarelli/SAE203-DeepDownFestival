@@ -1,5 +1,14 @@
 <template>
-<h1 class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit eaque odio asperiores excepturi harum obcaecati beatae nemo quasi sequi iure, modi, explicabo quod sapiente illum ipsa quisquam quia magnam mollitia! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae praesentium asperiores saepe voluptatibus illo rem neque repellat vero et, ex a quibusdam eos quasi labore assumenda aperiam cumque provident libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iusto qui praesentium placeat obcaecati perspiciatis excepturi temporibus? Consectetur asperiores, earum perferendis quam non odit fugit a sint temporibus, reiciendis quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, labore. Quis voluptates deserunt magni consectetur, harum enim iusto dolorum doloremque expedita obcaecati illo. Possimus harum dolores provident iste! Vitae, tenetur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt aliquam est a necessitatibus minima ex culpa cumque beatae illo temporibus, explicabo enim aliquid voluptatem facere sed omnis possimus animi nesciunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias laboriosam impedit ipsum natus porro dolorum odio cumque quaerat nisi id nemo quis eaque repellendus, sint velit esse fuga delectus! Distinctio! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi sunt error iste perferendis eaque, minima ex. A, sapiente. Esse labore perspiciatis sit, sunt doloribus eius ex quas quidem laborum molestiae! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium nesciunt aliquam dolore rerum ullam, officia pariatur labore ad minus quas? Excepturi, labore incidunt. Deleniti in iusto quia maiores vero a? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eius, aspernatur et laudantium ad cumque a harum aliquam quos nobis, aperiam itaque veritatis sapiente fuga animi quas pariatur quis quasi.</h1>
+  <div>
+    <div>
+      <div class="hometop py-20">
+        <img class="m-auto" src="../../public/icons/svg/hometop.svg" alt="Illustration">
+      </div>
+      <div>
+        <img src="../../public/Logosdecor.jpg" alt="">
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
