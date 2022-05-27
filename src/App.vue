@@ -1,7 +1,7 @@
 <template>
   <header>
     <Menu>
-      <div class="flex mb-9 md:hidden m-[5%]">
+      <div class=" flex mb-9 md:hidden m-[5%]">
         <div class="flex-auto">
           <router-link to="/">
             <img class="flex-auto h-[50px] w-[50px]" src="../public/icons/LogoDDBlanc.jpg" alt="Logo du festival Deep Down" >
@@ -33,7 +33,7 @@
       </transition>
     </Menu>
 
-    <nav class="hidden md:flex bg-white p-5 rounded-br-3xl rounded-bl-3xl">
+    <nav class="hidden fixed w-full md:flex bg-white p-5 rounded-br-3xl rounded-bl-3xl">
         <div class="mr-[2%]">
           <router-link to="/">
             <img class="flex-auto h-[50px] w-[50px]" src="../public/icons/LogoDDBlanc.jpg" alt="Logo du festival Deep Down" >

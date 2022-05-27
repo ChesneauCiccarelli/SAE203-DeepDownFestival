@@ -31,10 +31,12 @@
       <img
         src="../../public/horizontal/pexels-bence-szemerey-7192878.jpeg"
         class="w-20 grow"
+        alt="Photo du festival"
       />
       <img
         src="../../public/horizontal/pexels-caleb-oquendo-11140378.jpeg"
         class="w-20 grow"
+        alt="Photo du festival"
       />
     </figure>
   </div>

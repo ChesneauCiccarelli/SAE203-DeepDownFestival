@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-[90px]">
     <div class="md:flex md:max-h-[830px]">
       <div class="hometop md:w-[50%] py-20">
         <img class="m-auto md:flex-auto" src="../../public/icons/svg/hometop.svg" alt="Illustration">
@@ -12,7 +12,7 @@
     <section>
       <div>
         <div class="fondronds mt-[5%] p-[5%] pt-[7%]">
-          <h1 class="font-210 text-3xl text-center mb-5">LE FESTIVAL DE L'HISTOIRE DE LA MUSIQUE ELECTRONIQUE</h1>
+          <h1 class="neon font-210 text-3xl text-center mb-5">LE FESTIVAL DE L'HISTOIRE DE LA MUSIQUE ELECTRONIQUE</h1>
           <p class="font-cairo font-semibold text-xl text-center ">Plonger avec nous les <strong>27, 28 et 29 mai 2022</strong>. Bordeaux se transforme en sanctuaire de la musique éléctronique.</p>
           <div class="flex justify-center items-center gap-5">
             <p class="font-210-box italic text-xl text-center">VENEZ NOMBREUX</p>
@@ -121,17 +121,19 @@ export default {
 
 <style>
 .hometop{
-  background-image: url("../../public/Fonds/accueuil.png");
+  background-image: url("../../public/fonds/accueuil.png");
   background-position: center;
 }
 
 .fondronds{
-  background-image: url("../../public/Fonds/Pattern.png");
+  background-image: url("../../public/fonds/pattern.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.neon{
+  text-shadow: 0 0 20px #FF0000, 0 0 30px #FF0000, 0 0 40px #FF0000, 0px 0px 5px #FF0000;
+}
 
 div#slider { width: 100%; max-width: 1000px; overflow: hidden }
 div#slider figure {
