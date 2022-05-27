@@ -7,15 +7,9 @@
   <section class="mt-[5%]">
     <h1 class="neon font-210 font-black text-5xl text-center">Bienvenue au DEEP DOWN Festival </h1>
       <div class="mt-[5%]">
-        <div class="flex">
-          <img class="mx-auto max-w-xs" src="../../public/logosnewletter.jpg" alt="Logos du Deep Down Festival">
-          <img class="hidden md:flex mx-auto max-w-xs" src="../../public/logosnewletter.jpg" alt="Logos du Deep Down Festival">
-        </div>
+        <separation/>
         <images class="my-3"/>
-        <div class="flex">
-          <img class="mx-auto max-w-xs" src="../../public/logosnewletter.jpg" alt="Logos du Deep Down Festival">
-          <img class="hidden md:flex mx-auto max-w-xs" src="../../public/logosnewletter.jpg" alt="Logos du Deep Down Festival">
-        </div>
+        <separation/>
       </div>
   </section>
 
@@ -42,7 +36,7 @@
     </div>
   </section>
 
-  <div class="mt-[5%]">
+  <div class="md:mt-[5%]">
     <div class="flex gap-[4%]">
       <img class="w-[48%] h-[50%]" src="../../public/vertical/pexels-alena-darmel-6940242.jpeg" alt="Photo du festival">
       <img class="w-[48%] h-[50%] pt-[10%]" src="../../public/vertical/pexels-garon-piceli-1405422.jpeg" alt="Photo du festival">
@@ -62,9 +56,10 @@
 import heading from "../../src/components/HeadingsPageView.vue"
 import images from "../../src/components/ImagesView.vue"
 import agenda from "../../src/components/bouttons/AgendaView.vue"
+import separation from "../../src/components/decors/LogosSeparationView.vue"
 import DDbas from "../../src/components/FooterView.vue"
 export default {
-  components: { heading, images, agenda, DDbas },
+  components: { heading, images, agenda, DDbas, separation },
 };
 </script>
 

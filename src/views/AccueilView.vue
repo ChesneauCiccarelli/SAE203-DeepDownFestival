@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-[90px]">
+  <div class="md:pt-[90px]">
     <div class="md:flex md:max-h-[830px]">
       <div class="hometop md:w-[50%] py-20">
         <img class="m-auto md:flex-auto" src="../../public/icons/svg/hometop.svg" alt="Illustration">
@@ -47,10 +47,10 @@
     </section>
 
     <div class="fondronds my-[5%]">
-      <p class="font-210 text-5xl text-center">TR<strong class="text-accent">O</strong>IS</p>
-      <p class="font-210 text-5xl text-center">J<strong class="text-accent">O</strong>URS</p>
-      <p class="font-210 text-5xl text-center">P<strong class="text-accent">O</strong>UR</p>
-      <p class="font-210 text-5xl text-center">V<strong class="text-accent">O</strong>US</p>
+      <p class="font-210 text-5xl text-center">TR<strong class="text-accent neon">O</strong>IS</p>
+      <p class="font-210 text-5xl text-center">J<strong class="text-accent neon">O</strong>URS</p>
+      <p class="font-210 text-5xl text-center">P<strong class="text-accent neon">O</strong>UR</p>
+      <p class="font-210 text-5xl text-center">V<strong class="text-accent neon">O</strong>US</p>
       <router-link to="/programmation">
         <bouton class="mx-auto"/>
       </router-link>
@@ -82,7 +82,7 @@
     <section>
       <div class="bg-white mt-[5%] p-5 rounded-3xl">
         <h1 class="text-center font-210 font-black text-sombre mb-3">Pour toute autre question</h1>
-          <div class="w-[325px] h-[70px] mx-auto relative">
+          <div class="w-[300px] h-[70px] mx-auto relative">
             <svg
               viewBox="0 0 299 70"
               fill="none"
@@ -96,7 +96,7 @@
               ></path>
             </svg>
             <router-link to="/contact">
-              <p class="w-[325px] absolute top-[7.8px] text-xl font-210-d text-center text-white">CONTACTEZ<br/>NOUS</p>
+              <p class="w-[310px] absolute top-[7.8px] text-xl font-210-d text-center text-white">CONTACTEZ<br/>NOUS</p>
             </router-link>
           </div>
       </div>
