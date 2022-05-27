@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        'responsive': 'grid-cols-[repeat(auto-fit,300px)]',
+      },
       "colors": {
         "sombre": "#1d1d1b",
         "blanc": "#ffffff",
