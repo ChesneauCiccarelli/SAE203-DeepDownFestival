@@ -1,6 +1,6 @@
 <template>
 <div class="pt-[90px]">
-  <div>
+  <div class="festtop">
     <heading :titre="'LE FESTIVAL'" :text="'Découvrez en détail le DEEP DOWN Festival.'"/>
   </div>
 
@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style>
-.imgtop{
+.festtop{
   background-image: url("../../public/fonds/festival.png");
   background-position: center;
 }

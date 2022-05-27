@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="mx-auto" src="../../public/logosnewletter.jpg" alt="Logos du Deep Down Festival">
+    <logos/>
     <div class="flex flex-col justify-center items-center gap-5 bg-white p-5">
       <div>
         <p class="text-3xl font-210-box font-black italic text-center text-sombre">NEWSLETTER</p>
@@ -60,13 +60,14 @@
         </div>
       </form>
     </div>
-    <img class="mx-auto" src="../../public/logosnewletter.jpg" alt="Logos du Deep Down Festival">
+    <logos/>
   </div>
 </template>
 
 <script>
+import logos from "../../src/components/decors/LogosSeparationView.vue"
 export default {
-
+  components: {logos}
 }
 </script>
 

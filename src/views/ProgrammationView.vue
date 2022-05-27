@@ -1,6 +1,6 @@
 <template>
 <div class="md:pt-[90px]">
-  <div>
+  <div class="programmtop">
     <heading :titre="'PROGRAMMATION'" :text="'Les trois jours les plus remplis de votre année.'"/>
   </div>
 
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style>
-.imgtop{
+.programmtop{
   background-image: url("../../public/fonds/programmation.png");
   background-position: center;
 }

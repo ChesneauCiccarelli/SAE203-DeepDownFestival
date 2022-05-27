@@ -1,7 +1,7 @@
 <template>
   <div class="md:pt-[90px]">
 
-  <div>
+  <div class="artisttop">
     <heading :titre="'ARTISTES'" :text="'Vos artistes favoris montent sur la grande scène pour vous.'"/>
   </div>
 
@@ -232,6 +232,8 @@
     </router-link>
   </section>
 
+  <DDbas class="mt-[100px]"/>
+
   </div>
 </template>
 
@@ -246,7 +248,7 @@ export default {
 </script>
 
 <style>
-.imgtop{
+.artisttop{
   background-image: url("../../public/fonds/artistes.png");
   background-position: center;
 }

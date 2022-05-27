@@ -127,21 +127,23 @@
         </defs>
       </svg>
     </div>
-    <h2 class="font-210 font-black text-3xl mb-3">Vos artistes</h2>
-    <div class="flex gap-5">
-      <div class="w-[50%] text-right">
-        <p class="font-cairo font-semibold text-xl">{{artiste1}}</p>
-        <p class="font-cairo font-semibold text-xl">{{artiste2}}</p>
-        <p class="font-cairo font-semibold text-xl">{{artiste3}}</p>
-        <p class="font-cairo font-semibold text-xl">{{artiste4}}</p>
-        <p class="font-cairo font-semibold text-xl">{{artiste5}}</p>
-      </div>
-      <div class="w-[50%] text-left">
-        <p class="font-cairo font-semibold text-xl">{{artiste6}}</p>
-        <p class="font-cairo font-semibold text-xl">{{artiste7}}</p>
-        <p class="font-cairo font-semibold text-xl">{{artiste8}}</p>
-        <p class="font-cairo font-semibold text-xl">{{artiste9}}</p>
-        <p class="font-cairo font-semibold text-xl">{{artiste10}}</p>
+    <div class="fondronds p-5">
+      <h2 class="font-210 font-black text-3xl mb-3">Vos artistes</h2>
+      <div class="flex gap-5">
+        <div class="w-[50%] text-right">
+          <p class="font-cairo font-semibold text-xl">{{artiste1}}</p>
+          <p class="font-cairo font-semibold text-xl">{{artiste2}}</p>
+          <p class="font-cairo font-semibold text-xl">{{artiste3}}</p>
+          <p class="font-cairo font-semibold text-xl">{{artiste4}}</p>
+          <p class="font-cairo font-semibold text-xl">{{artiste5}}</p>
+        </div>
+        <div class="w-[50%] text-left">
+          <p class="font-cairo font-semibold text-xl">{{artiste6}}</p>
+          <p class="font-cairo font-semibold text-xl">{{artiste7}}</p>
+          <p class="font-cairo font-semibold text-xl">{{artiste8}}</p>
+          <p class="font-cairo font-semibold text-xl">{{artiste9}}</p>
+          <p class="font-cairo font-semibold text-xl">{{artiste10}}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -223,5 +225,11 @@ export default {
 <style>
 .neon{
   text-shadow: 0 0 20px #FF0000, 0 0 30px #FF0000, 0 0 40px #FF0000, 0px 0px 5px #FF0000;
+}
+.fondronds{
+  background-image: url("../../public/fonds/pattern.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
