@@ -46,15 +46,15 @@
       </div>
     </section>
 
-    <div class="my-[5%]">
+    <div class="fondronds my-[5%]">
       <p class="font-210 text-5xl text-center">TR<strong class="text-accent">O</strong>IS</p>
       <p class="font-210 text-5xl text-center">J<strong class="text-accent">O</strong>URS</p>
       <p class="font-210 text-5xl text-center">P<strong class="text-accent">O</strong>UR</p>
       <p class="font-210 text-5xl text-center">V<strong class="text-accent">O</strong>US</p>
+      <router-link to="/programmation">
+        <bouton class="mx-auto"/>
+      </router-link>
     </div>
-    <router-link to="/programmation">
-    <bouton class="mx-auto"/>
-    </router-link>
 
     <section class="mt-[10%]">
       <div class="md:flex md:flex-auto">
@@ -121,12 +121,12 @@ export default {
 
 <style>
 .hometop{
-  background-image: url("../public/icons/svg/Fonds/accueil.svg");
+  background-image: url("../../public/Fonds/accueuil.png");
   background-position: center;
 }
 
 .fondronds{
-  background-image: url("../public/icons/svg/Fonds/Pattern.png");
+  background-image: url("../../public/Fonds/Pattern.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
