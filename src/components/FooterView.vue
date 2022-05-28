@@ -22,9 +22,15 @@
     <div class="flex flex-col justify-center items-center relative">
       <p class="text-3xl font-black italic text-center text-sombre">SUIVEZ-NOUS</p>
       <div class="flex relative gap-5">
-        <img src="../../public/icons/svg/Brands/facebook.svg" alt="Logo Facebook">
-        <img src="../../public/icons/svg/Brands/instagram.svg" alt="Logo Instagram">
-        <img src="../../public/icons/svg/Brands/twitter.svg" alt="Logo Twitter">
+        <a href="https://www.facebook.com/">
+          <img src="../../public/icons/svg/Brands/facebook.svg" alt="Logo Facebook">
+        </a>
+        <a href="https://www.instagram.com/">
+          <img src="../../public/icons/svg/Brands/instagram.svg" alt="Logo Instagram">
+        </a>
+        <a href="https://twitter.com/">
+          <img src="../../public/icons/svg/Brands/twitter.svg" alt="Logo Twitter">
+        </a>
       </div>
     </div>
 
