@@ -38,12 +38,12 @@
 
   <div class="md:mt-[5%]">
     <div class="flex gap-[4%]">
-      <img class="w-[48%] h-[50%]" src="../../public/vertical/pexels-alena-darmel-6940242.jpeg" alt="Photo du festival">
-      <img class="w-[48%] h-[50%] pt-[10%]" src="../../public/vertical/pexels-garon-piceli-1405422.jpeg" alt="Photo du festival">
+      <img class="w-[48%] h-[50%]" src="../../public/vertical/fire.jpeg" alt="Photo du festival">
+      <img class="w-[48%] h-[50%] pt-[10%]" src="../../public/vertical/nightfirework.jpeg" alt="Photo du festival">
     </div >
     <div class="mt-[4%] flex gap-[4%]">
-      <img class="w-[48%] h-[50%] -mt-[10%]" src="../../public/vertical/pexels-peter-spencer-1317374.jpeg" alt="Photo du festival">
-      <img class="w-[48%] h-[50%]" src="../../public/vertical/pexels-wendy-wei-1540406.jpeg" alt="Photo du festival">
+      <img class="w-[48%] h-[50%] -mt-[10%]" src="../../public/vertical/nightfirework2.jpeg" alt="Photo du festival">
+      <img class="w-[48%] h-[50%]" src="../../public/vertical/roue.jpeg" alt="Photo du festival">
     </div>
   </div>
 
@@ -54,7 +54,7 @@
 
 <script>
 import heading from "../../src/components/HeadingsPageView.vue"
-import images from "../../src/components/ImagesView.vue"
+import images from "../../src/components/ImageView.vue"
 import agenda from "../../src/components/bouttons/AgendaView.vue"
 import separation from "../../src/components/decors/LogosSeparationView.vue"
 import DDbas from "../../src/components/FooterView.vue"

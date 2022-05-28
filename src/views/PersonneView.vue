@@ -66,74 +66,86 @@
       <div>
         <img
         src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
         <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/lily.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Lily</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/differentworld.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Different World</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/singmetosleep.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Sing me to sleep</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/diamondheart.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Diamon Heart</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/endoftime.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">End of Time</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/alone.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Alone</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/alone2.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Alone pt.2</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/onmyway.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">On my way</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/allfallsdown.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">All falls down</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/thespectre.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">The Spectre</p>
       </div>
       <div>
         <img
-        src="../../public/titres/faded.jpeg"
-        class="w-[200px] h-[200px]"/>
-        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+        src="../../public/titres/lostcontrol.jpg"
+        class="w-[200px] h-[200px]"
+        alt="Image du single"/>
+        <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Lost Control</p>
       </div>
     </div>
 
@@ -141,26 +153,30 @@
     <div class="grid grid-cols-[repeat(auto-fit,200px)] gap-5 justify-center mt-5">
         <div>
           <img
-          src="../../public/titres/faded.jpeg"
-          class="w-[200px] h-[200px]"/>
-          <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+          src="../../public/albums/worldofwalker.png"
+          class="w-[200px] h-[200px]"
+          alt="Image de l'album"/>
+          <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">World of Walker</p>
         </div>
         <div>
           <img
-          src="../../public/titres/faded.jpeg"
-          class="w-[200px] h-[200px]"/>
-          <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+          src="../../public/albums/differentworld.png"
+          class="w-[200px] h-[200px]"
+          alt="Image de l'album"/>
+          <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Different World</p>
         </div>
         <div>
           <img
-          src="../../public/titres/faded.jpeg"
-          class="w-[200px] h-[200px]"/>
-          <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
+          src="../../public/albums/walkerracingleague.png"
+          class="w-[200px] h-[200px]"
+          alt="Image de l'album"/>
+          <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Walker Racing League</p>
         </div>
         <div>
           <img
-          src="../../public/titres/faded.jpeg"
-          class="w-[200px] h-[200px]"/>
+          src="../../public/albums/faded.png"
+          class="w-[200px] h-[200px]"
+          alt="Image de l'album"/>
           <p class="w-[200px] mt-3 text-base font-210-box italic text-center text-white">Faded</p>
         </div>
       </div>

@@ -11,7 +11,7 @@
 
     <section>
       <div>
-        <div class="fondronds mt-[5%] p-[5%] pt-[7%]">
+        <div class="fondronds mt-[5%] p-[5%] pt-[7%] rounded-3xl">
           <h1 class="neon font-210 text-3xl text-center mb-5">LE FESTIVAL DE L'HISTOIRE DE LA MUSIQUE ELECTRONIQUE</h1>
           <p class="font-cairo font-semibold text-xl text-center ">Plonger avec nous les <strong>27, 28 et 29 mai 2022</strong>. Bordeaux se transforme en sanctuaire de la musique éléctronique.</p>
           <div class="flex justify-center items-center gap-5">
@@ -109,7 +109,7 @@
 
 <script>
 import carrousel from "../components/CarrouselView.vue"
-import images from "../components/ImagesView.vue"
+import images from "../components/ImageView.vue"
 import bouton from "../components/bouttons/BouttonView.vue"
 import composant from "../components/bouttons/ComposantView.vue"
 import newsletter from "../components/NewsletterView.vue"

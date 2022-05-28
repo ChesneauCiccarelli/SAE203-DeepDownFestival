@@ -4,23 +4,23 @@
   <div id="slider" class="md:hidden">
     <figure>
       <img
-        src="../../public/horizontal/alexander-popov-hTv8aaPziOQ-unsplash.jpeg"
+        src="../../public/horizontal/whitemanequin.jpeg"
         class="rounded-[20px]"
       />
       <img
-        src="../../public/horizontal/alexander-popov-Vy2Bttl96_E-unsplash.jpeg"
+        src="../../public/horizontal/neons.jpeg"
         class="rounded-[20px]"
       />
       <img
-        src="../../public/horizontal/artem-bryzgalov-d7xZrRQanp8-unsplash.jpeg"
+        src="../../public/horizontal/outsidepeople.jpeg"
         class="rounded-[20px]"
       />
       <img
-        src="../../public/horizontal/colin-lloyd-eiQqGBAMgIE-unsplash.jpeg"
+        src="../../public/horizontal/djpanel.jpeg"
         class="rounded-[20px]"
       />
       <img
-        src="../../public/horizontal/daniel-robert-dinu-KPX_dYb4CJI-unsplash.jpeg"
+        src="../../public/horizontal/nightfog.jpeg"
         class="rounded-[20px]"
       />
     </figure>
@@ -29,12 +29,12 @@
   <div>
     <figure class="hidden md:flex md:flex-auto md:h-80">
       <img
-        src="../../public/horizontal/pexels-bence-szemerey-7192878.jpeg"
+        src="../../public/horizontal/whitemanequin.jpeg"
         class="w-20 grow"
         alt="Photo du festival"
       />
       <img
-        src="../../public/horizontal/pexels-caleb-oquendo-11140378.jpeg"
+        src="../../public/horizontal/outsidepeople.jpeg"
         class="w-20 grow"
         alt="Photo du festival"
       />

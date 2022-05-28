@@ -150,7 +150,7 @@
 </template>
 
 <script>
-import images from "../components/ImagesView.vue"
+import images from "../components/ImageView.vue"
 export default {
   components: { images },
   props:{

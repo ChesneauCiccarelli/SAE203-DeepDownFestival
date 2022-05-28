@@ -42,7 +42,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/justice.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -54,7 +54,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/cassius.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -66,7 +66,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/disclosure.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -78,7 +78,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/solomon.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -90,7 +90,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/moodyman.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -102,7 +102,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/mayajanecoles.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -114,7 +114,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/stgermain.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -122,23 +122,21 @@
         </div>
       </div>
     </router-link>
-    <router-link to="/personne">
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/invitemystere.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
           <p class="w-[300px] shadow relative bottom-10 text-xl font-210-box font-black italic text-center text-white">Invite Mystere</p>
         </div>
       </div>
-    </router-link>
     <router-link to="/personne">
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/benwatt.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -150,7 +148,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/petitbiscuit.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -162,7 +160,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/flume.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -174,7 +172,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/hallucinogen.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -186,7 +184,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/kungs.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -198,7 +196,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/marshmellow.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -210,7 +208,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/skrillex.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />
@@ -222,7 +220,7 @@
       <div>
         <div class="w-[300px] h-[200px]">
           <img
-            src="../../public/artistes/alanwalker.jpg"
+            src="../../public/artistes/luuul.jpg"
             class="w-[300px] h-[200px]"
             alt="Photo de l'artiste"
           />

@@ -210,7 +210,7 @@ import underline from "../../src/components/decors/UnderlineView.vue"
 import agenda from "../../src/components/bouttons/AgendaView.vue"
 import { LocationMarkerIcon } from "@heroicons/vue/outline"
 import carrousel from "../components/CarrouselView.vue"
-import images from "../components/ImagesView.vue"
+import images from "../components/ImageView.vue"
 import DDbas from "../../src/components/FooterView.vue"
 export default {
   components: { underline, agenda, LocationMarkerIcon, carrousel, images, DDbas }

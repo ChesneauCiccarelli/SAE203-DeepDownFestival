@@ -17,7 +17,7 @@
       </div>
     </div>
     
-    <img src="../../public/icons/svg/iconesfooter.svg" alt="Logos du Deep Down Festival">
+    <img class="w-[450px]" src="../../public/logosnewletter.jpg" alt="Logos du Deep Down Festival">
 
     <div class="flex flex-col justify-center items-center relative">
       <p class="text-3xl font-black italic text-center text-sombre">SUIVEZ-NOUS</p>
