@@ -6,69 +6,61 @@
   </div>
 
   <section class="mt-[5%]">
-    <div class="flex">
-        <SearchIcon class="w-6 h-6"/>
-        <input class="bg-sombre font-cairo font-semibold text-xl text-accent flex-auto" type="text" v-model="query" placeholder="Rechercher"/>
-        <PlusIcon class="w-6 h-6"/>
-    </div>
-    <underline/>
+      <h1 class="neon font-210-box italic text-5xl text-center mb-5">Les artistes presents au Deep Down Festival</h1>
   </section>
 
-  <section class="mt-[5%] text-center">
-    <div class="card bg-dark">
-        <div class="card-header">
-            <h5>Liste des artistes du Deep Down Festival
-                <span class="float-right" title="Ajouter un artiste">
-                    <router-link to="/CreateArtistes">
-                        <i class="fa fa-plus fa-lg text-light"></i>
-                    </router-link>
-                </span>
-            </h5>
-        </div>    
-                        
-        <div class="card-body table-responsive">
-            <table class="table text-light">
-                <thead>
-                    <tr>                      
-                        <th scope="col" class="text-center">Image</th>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Pays</th>
-                        <th scope="col">Né le</th>
-                        <th scope="col">Actions</th>                                
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="art in listeArtistes" :key="art.id">
-                        <td class="text-center">                                        
-                            <img class="media-object imageSmall" :src="art.photo" 
-                            :alt="art.prenom+' '+art.nom">                                                                
-                        </td>
-                        <td><b>{{art.nom}}</b></td>
-                        <td>{{art.nationalite}}</td>
-                        <td>{{dateFr(art.naissance)}}</td>
-                        <td>
-                            <span title="Supprimer l'artiste" class="mr-2">
-                                <RouterLink :to="{ name:'DeleteArtistes', params: { id: art.id }}">
-                                    <i class="fa fa-times fa-lg text-light" ></i>
-                                </RouterLink>
-                            </span>
-                            <span  title="Modifier l'artiste" class="mr-2">
-                                <!-- Pour passer un paramètre dans la navigation :
-                                On utilise le nom de la route
-                                l'attribut params, permet de préciser le nom du paramètre (id) 
-                                et sa valeur (part.id, id du participant) 
-                                -->
-                                <RouterLink :to="{ name:'UpdateArtistes', params: { id: art.id }}">
-                                    <i class="fa fa-edit fa-lg text-light" ></i>
-                                </RouterLink>
-                            </span>             
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+  <section class="mt-[5%]">
+    <div class="md:flex">
+        <div class="flex-auto flex items-center">
+            <SearchIcon class="w-6 h-6"/>
+            <input class="bg-sombre font-cairo font-semibold text-xl text-accent flex-auto" type="text" v-model="query" placeholder="Rechercher (ça marche, essayez)"/>  
+        </div>
+        <underline/>
+        <div>
+            <router-link to="/CreateArtistes" class="flex gap-3 bg-accent text-white py-2 px-3 rounded-full justify-center mt-[5%] md:mt-0">
+                <p class="font-210 font-semibold text-base">AJOUTER</p>
+                <PlusIcon class="w-6 h-6"/>
+            </router-link>
         </div>
     </div>
   </section>
+
+    <section>
+        <div class="mt-[5%] grid grid-cols-[repeat(auto-fit,300px)] gap-5 justify-center align-middle">
+            <div v-for="art in searchByName" :key="art.id" class="boerder-2 border-accent">
+                <router-link to="/personne">
+                    <div>
+                        <img :src="art.photo" :alt="art.prenom+' '+art.nom">   
+                        <p class="w-[300px] shadow font-210-box font-black italic text-center text-3xl my-3 text-white">{{art.nom}}</p>
+                    </div>
+                </router-link>
+                <div>
+                    <div class="flex justify-evenly">
+                        <div class="text-center">
+                            <p class="font-cairo font-black text-xl text-white underline">Pays</p>
+                            <p class="font-cairo font-semibold text-xl text-white">{{art.nationalite}}</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-cairo font-black text-xl text-white underline">Date de naissance</p>
+                            <p class="font-cairo font-semibold text-xl text-white">{{dateFr(art.naissance)}}</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-evenly my-2">
+                        <div>
+                            <RouterLink :to="{ name:'DeleteArtistes', params: { id: art.id }}">
+                                <XIcon class="hover:text-accent w-10 h-10"/>
+                            </RouterLink>
+                        </div>
+                        <div>
+                            <RouterLink :to="{ name:'UpdateArtistes', params: { id: art.id }}">
+                                <PencilAltIcon class="hover:text-accent w-10 h-10"/>
+                            </RouterLink>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
   <DDbas class="mt-[100px]"/>
 
@@ -82,16 +74,27 @@ import { SearchIcon, PlusIcon, XIcon, PencilAltIcon } from "@heroicons/vue/outli
 import underline from "../../components/decors/UnderlineView.vue"
 import { getFirestore, collection, doc, getDocs, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
 import { getStorage, ref, getDownloadURL, uploadString } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
+
 export default {
   name:'ArtistesView',
   components: { heading, DDbas, SearchIcon, PlusIcon, XIcon, PencilAltIcon, underline },
   data() {
     return {
-            listeArtistes:[]
+            listeArtistes:[],
+            viewFilter_1:false,
+            query:''
         }
     },
   mounted(){
       this.getArtistes();
+  },
+  computed:{
+        searchByName() {
+            let query = this.query;
+            return this.listeArtistes.filter(function(art){
+                return art.nom.includes(query);
+            })                
+        },
   },
   methods: {
       async getArtistes(){
@@ -129,11 +132,5 @@ export default {
 .artisttop{
   background-image: url("../../public/fonds/artistes.png");
   background-position: center;
-}
-.neon{
-  text-shadow: 0 0 20px #FF0000, 0 0 30px #FF0000, 0 0 40px #FF0000, 0px 0px 5px #FF0000;
-}
-.shadow{
-  text-shadow: 3px 3px 2px black, 2px 2px 5px red;
 }
 </style>

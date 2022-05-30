@@ -177,12 +177,7 @@ console.log("id artistes", this.$route.params.id);
 </script>
 
 <style scoped>
-a{
-    color:white;
-}
-a:hover{
-    text-decoration:none;
-}
+
 </style>
 
 

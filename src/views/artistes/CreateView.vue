@@ -195,12 +195,7 @@ console.log("Liste des pays", this.listePays);
 </script>
 
 <style scoped>
-a{
-    color:white;
-}
-a:hover{
-    text-decoration:none;
-}
+
 </style>
 
 

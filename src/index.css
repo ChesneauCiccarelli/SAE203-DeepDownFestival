@@ -11,3 +11,14 @@ section{
   margin-left: 5%;
   margin-right: 5%;
 }
+
+a:hover{
+  text-decoration: none;
+}
+
+.neon{
+  text-shadow: 0 0 20px #FF0000, 0 0 30px #FF0000, 0 0 40px #FF0000, 0px 0px 5px #FF0000;
+}
+.shadow{
+  text-shadow: 3px 3px 2px black, 2px 2px 5px red;
+}
