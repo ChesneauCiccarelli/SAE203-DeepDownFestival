@@ -19,10 +19,10 @@
   <section class="mt-[5%]">
     <h1 class="font-210-box italic text-5xl text-center mb-5">Ajouter un artiste au festival</h1>
     <div class="xl:flex">
-      <div class="md:w-[50%] border-2 border-accent rounded-3xl p-2 xl:mb-0 mx-auto mb-[5%]">
-        <img :src="imageData" class="rounded-3xl"/>
+      <div class="xl:w-[50%] border-2 border-accent rounded-3xl p-2 mx-auto mb-[5%] xl:mb-0 ">
+        <img :src="imageData" class="rounded-3xl mx-auto"/>
       </div>
-      <div class="xl:pl-3 xl:my-auto">
+      <div class="xl:my-auto">
         <form @submit.prevent="createArtistes">
           <div>
             <div>
@@ -87,7 +87,7 @@ import { getStorage, ref, getDownloadURL, uploadString } from 'https://www.gstat
  
 export default {
     name:'CreateView',
-    components:{ underline, DDbas},
+    components:{ underline, DDbas },
     data() {
         return {
             imageData:null,
@@ -143,7 +143,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>
 

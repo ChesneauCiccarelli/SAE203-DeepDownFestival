@@ -244,7 +244,7 @@ console.log("id artistes", this.$route.params.id);
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>
 

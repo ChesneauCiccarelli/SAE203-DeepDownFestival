@@ -1,154 +1,116 @@
 <template>
-    <div class="container md:pt-[200px]">
-        <form enctype="multipart/form-data"  @submit.prevent="deleteArtistes">
-            <div class="card bg-dark">
-
-                <div class="card-header">
-                    <h5 style="color:white;">Suppression d'un artiste</h5>
-                </div>    
-
-                <div class="card-body">   
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="text-center">
-                                <img class="preview img-fluid" :src="photoActuelle"/>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" >Nom</span>
-                                </div>
-                                <input 
-                                    class="form-control" placeholder="Nom de la personne"
-                                    v-model="artistes.nom"
-                                    disabled />                    
-                            </div>
-                            <br/>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" >Date naissance</span>
-                                </div>
-                                <input type="date" class="form-control" 
-                                    v-model="artistes.naissance" 
-                                    format="dd/mm/yyyy"
-                                    disabled
-                                    />                    
-                            </div>
-                            <br/>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" >Pays</span>
-                                </div>
-                                <input class="form-control" 
-                                    v-model="artistes.nationalite" 
-                                    disabled
-                                    />                    
-                            </div>
-                            <br/>
-                        </div>
-                    </div>         
-                    <br/>      
-                    <h5 class="alert alert-warning text-center" role="alert">
-                        Attention vous allez supprimer l'artiste, cette action est irréversible !!
-                    </h5>
-                </div>
-
-                <div class="card-footer">   
-                    <button type="submit" class="float-left btn btn-dark" >
-                        Supprimer
-                    </button>
-                    <button class="float-right btn btn-dark">
-                        <RouterLink to="/artistes">Cancel</RouterLink>
-                    </button>
-                </div>
-
-            </div>
-        </form>        
+<div class="md:pt-[90px]">
+  <div class="md:flex md:max-h-[830px]">
+    <div class="m-auto">
+      <img class="m-auto max-h-[500px] md:flex-auto" src="../../../public/logosx3.jpg" alt="Illustration Deep Down">
+      <div class="my-[10%]">
+        <div class="mt-[5%] mb-2 flex justify-center">
+          <h1 class="font-210 text-5xl text-center">SUPPRIMER UN ARTISTE</h1>
+        </div>
+        <underline/>
+      </div>
+      <img class="m-auto max-h-[500px] md:flex-auto" src="../../../public/logosx3.jpg" alt="Illustration Deep Down">
     </div>
+    <div class="md:m-auto">
+      <img class="md:max-h-[1000px]" src="../../../public/Logosdecor.jpg" alt="Logos du Deep Down Festival">
+    </div>
+  </div>
+</div>
+
+  <section class="mt-[5%]">
+    <h1 class="font-210-box italic text-5xl text-center mb-5">Supprimer un artiste</h1>
+    <div class="xl:flex">
+      <div class="xl:w-[50%] border-2 border-accent rounded-3xl p-2 xl:mb-0 mx-auto mb-[5%]">
+        <img :src="photoActuelle" class="rounded-3xl mx-auto"/>
+      </div>
+      <div class="xl:my-auto">
+        <form @submit.prevent="deleteArtistes">
+          <div>
+            <div>
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
+                        <span class="font-cairo font-black text-lg" >Nom</span>
+                    </div>
+                      <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" placeholder="Complétez avec un nom" v-model="artistes.nom" disabled />                    
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
+                        <span class="font-cairo font-black text-lg" >Date de naissance</span>
+                    </div>
+                    <input type="date" class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" v-model="artistes.naissance" format="dd/mm/yyyy" disabled />                    
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
+                        <span class="font-cairo font-black text-lg" >Pays</span>
+                    </div>
+                    <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" v-model="artistes.nationalite" disabled/>
+                </div>
+              </div>
+              <h2 class="bg-sombre text-center font-cairo font-semibold text-2xl" role="alert"> <strong class="neon">Attention</strong> supprimer un artiste est irréversible.</h2>
+            </div>
+            <div class="flex justify-evenly mt-[5%]">
+              <button class="bg-sombre text-white border-2 border-accent font-210 px-3 py-2 rounded-3xl">
+                <router-link to="/artistes">Annuler</router-link>
+              </button>
+              <button type="submit" class="bg-accent text-white border-2 border-white font-210 px-3 py-2 rounded-3xl">Supprimer</button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </section>
+
+  <DDbas class="mt-[100px]"/>
+
 </template>
 
 <script>
-// Bibliothèque Firestore : import des fonctions
-import { 
-    getFirestore, 
-    collection, 
-    doc, 
-    getDoc,
-    getDocs, 
-    addDoc, 
-    updateDoc, 
-    setDoc,
-    deleteDoc, 
-    onSnapshot, 
-    query,
-    orderBy
-    } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+import underline from "../../../src/components/decors/UnderlineView.vue"
+import DDbas from "../../../src/components/FooterView.vue"
 
-// Storage
-import { 
-    getStorage, 
-    ref, 
-    getDownloadURL, 
-    uploadBytes,
-    uploadString,
-    deleteObject,
-    listAll } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
-
+import { getFirestore, collection, doc, getDocs, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+import { getStorage, ref, getDownloadURL, uploadString } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
 
 export default {
     name:'DeleteView',
+    components:{ underline, DDbas },
     data() {
         return {
-            artistes:{           // Le participant à créer
-                nom:null,               // son nom 
-                photo:null,             // sa photo (nom du fichier)
-                naissance:null,         // sa date de naissance
-                nationalite:null        // sa nationalité
+            artistes:{
+                nom:null,
+                photo:null,
+                naissance:null,
+                nationalite:null
             },
 
-            refArtistes:null,     // Référence du participant à modifier
-            photoActuelle:null       // Photo actuelle du participant
+            refArtistes:null,
+            photoActuelle:null
         }
     },
-    mounted(){ // Montage de la vue
-        // Récupération du id passé en paramètre
-        // On utilise le id passé par la route
-        // via la variable système $route de la vue
-console.log("id artistes", this.$route.params.id);
-        // Recherche participant concerné
+    mounted(){
+    console.log("id artistes", this.$route.params.id);
         this.getArtistes(this.$route.params.id);
     },
 
     methods :{
 
         async getArtistes(id){
-            // Obtenir Firestore
             const firestore = getFirestore();
-            // Base de données (collection)  document participant
-            // Récupération sur Firestore du participant via son id
             const docRef = doc(firestore, "artistes", id);
-            // Référence du participant concerné
             this.refArtistes = await getDoc(docRef);
-            // Test si le participant demandé existe
             if(this.refArtistes.exists()){
-                // Si oui on récupère ses données
                 this.artistes = this.refArtistes.data();
-                // Mémorisation photoActuelle
                 this.photoActuelle = this.artistes.photo;
             }else{
-                // Sinon simple message d'erreur
                 this.console.log("Artiste inexistant");
             }
-            // Obtenir le Storage
             const storage = getStorage();
-            // Référence de l'image du participant
             const spaceRef = ref(storage, 'artistes/'+this.artistes.photo);
-            // Récupération de l'url complète de l'image
             getDownloadURL(spaceRef)
                 .then((url) => {
-                    // Mise à jour de l'image prévisualisée
                     this.photoActuelle = url;
             })
             .catch((error) =>{
@@ -158,17 +120,10 @@ console.log("id artistes", this.$route.params.id);
 
         async deleteArtistes(){
             const firestore = getFirestore();
-            // Suppresion du participant
             await deleteDoc(doc(firestore, "artistes", this.$route.params.id));
-
-            // Suppresson de l'image
             const storage = getStorage();
-            // Référence du fichier de la photo
             let docRef = ref(storage, 'artistes/'+this.artistes.photo);
-            // Suppression du fichier
             deleteObject(docRef);
-
-            // redirection sur la liste des participants
             this.$router.push('/artistes');       
         }
     }
@@ -176,7 +131,7 @@ console.log("id artistes", this.$route.params.id);
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>
 
