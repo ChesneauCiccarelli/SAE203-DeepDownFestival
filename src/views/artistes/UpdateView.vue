@@ -1,152 +1,117 @@
 <template>
-    <div class="md:pt-[200px] container">
-        <form enctype="multipart/form-data"  @submit.prevent="updateArtistes">
-            <div class="card bg-dark">
-
-                <div class="card-header">
-                    <h5 style="color:white;">Mise à jour de l'artiste</h5>
-                </div>    
-
-                <div class="card-body">   
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="text-center">
-                                <img class="preview img-fluid" :src="imageData"/>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" >Nom</span>
-                                </div>
-                                <input 
-                                    class="form-control" placeholder="Nom de la personne"
-                                    v-model="artistes.nom"
-                                    required />                    
-                            </div>
-                            <br/>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Photo</span>
-                                </div>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" ref="file" id="file"
-                                    @change="previewImage" 
-                                    >
-                                    <label class="custom-file-label" for="file">Sélectionner l'image</label>
-                                </div>
-                            </div>
-                            <br/>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" >Date de naissance</span>
-                                </div>
-                                <input 
-                                    type="date"
-                                    class="form-control" 
-                                    required 
-                                    v-model="artistes.naissance" 
-                                    format="dd/mm/yyyy"
-                                    />                    
-                            </div>
-                            <br/>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" >Pays</span>
-                                </div>
-                                <select class="custom-select" v-model="artistes.nationalite">
-                                    <option selected disabled>Sélectionner un Pays</option>
-
-                                    <option v-for="pays in listePays" :key="pays.nom">
-                                        {{pays.nom}}
-                                    </option>
-                                </select>
-                            </div>
-                            <br/>
-                        </div>
-                    </div>               
-                </div>
-
-                <div class="card-footer">   
-                    <button type="submit" class="float-left btn btn-dark" >
-                        Modifier
-                    </button>
-                    <button class="float-right btn btn-dark">
-                        <RouterLink to="/artistes">Cancel</RouterLink>
-                    </button>
-                </div>
-
+<div class="md:pt-[90px]">
+    <div class="md:flex md:max-h-[830px]">
+        <div class="m-auto">
+            <img class="m-auto max-h-[500px] md:flex-auto" src="../../../public/logosx3.jpg" alt="Illustration Deep Down">
+        <div class="my-[10%]">
+            <div class="mt-[5%] mb-2 flex justify-center">
+                <h1 class="font-210 text-5xl text-center">MODIFIER UN ARTISTE</h1>
             </div>
-        </form>        
+            <underline/>
+        </div>
+        <img class="m-auto max-h-[500px] md:flex-auto" src="../../../public/logosx3.jpg" alt="Illustration Deep Down">
+        </div>
+        <div class="md:m-auto">
+            <img class="md:max-h-[1000px]" src="../../../public/Logosdecor.jpg" alt="Logos du Deep Down Festival">
+        </div>
     </div>
+
+    <section class="mt-[5%]">
+        <h1 class="font-210-box italic text-5xl text-center mb-5">Modifier les donnees d'un artiste</h1>
+        <div class="xl:flex">
+        <div class="xl:w-[50%] border-2 border-accent rounded-3xl p-2 mx-auto mb-[5%] xl:mb-0 ">
+            <img :src="imageData" class="rounded-3xl mx-auto"/>
+        </div>
+        <div class="xl:my-auto">
+            <form @submit.prevent="updateArtistes">
+            <div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
+                            <span class="font-cairo font-black text-lg" >Nom</span>
+                        </div>
+                        <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" placeholder="Complétez avec un nom" v-model="artistes.nom" required />                    
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
+                            <span class="font-cairo font-black text-lg" >Image</span>
+                        </div>
+                        <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" type="file" placeholder="Ajouter un fichier" ref="file" id="file" @change="previewImage">               
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
+                            <span class="font-cairo font-black text-lg" >Date de naissance</span>
+                        </div>
+                        <input type="date" class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" v-model="artistes.naissance" format="dd/mm/yyyy" required />                    
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
+                            <span class="font-cairo font-black text-lg" >Pays</span>
+                        </div>
+                        <select class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" v-model="artistes.nationalite">
+                        <option selected disabled>Sélectionner un Pays</option>
+                        <option v-for="pays in listePays" :key="pays.nom">{{pays.nom}}</option>
+                        </select>                    
+                    </div>
+                </div>
+                </div>
+                <div class="flex justify-evenly mt-[5%]">
+                <button class="bg-sombre text-white border-2 border-accent font-210 px-3 py-2 rounded-3xl">
+                    <router-link to="/artistes">Annuler</router-link>
+                </button>
+                <button type="submit" class="bg-accent text-white border-2 border-white font-210 px-3 py-2 rounded-3xl">Mettre a jour</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </section>
+</div>
 </template>
 
 <script>
-// Bibliothèque Firestore : import des fonctions
-import { 
-    getFirestore, 
-    collection, 
-    doc, 
-    getDoc,
-    getDocs, 
-    addDoc, 
-    updateDoc, 
-    setDoc,
-    deleteDoc, 
-    onSnapshot, 
-    query,
-    orderBy
-    } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+import underline from "../../../src/components/decors/UnderlineView.vue"
+import DDbas from "../../../src/components/FooterView.vue"
 
-// Storage
-import { 
-    getStorage, 
-    ref, 
-    getDownloadURL, 
-    uploadBytes,
-    uploadString,
-    deleteObject,
-    listAll } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
-
+import { getFirestore, collection, doc, getDoc, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+import { getStorage, ref, getDownloadURL, uploadBytes, uploadString, deleteObject, listAll } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
 
 export default {
     name:'UpdateView',
+    components:{ underline, DDbas },
+
     data() {
         return {
-            imageData:null,         // Image prévisualisée
-            listePays:[],           // Liste des pays pour la nationalité du participant
-            artistes:{           // Le participant à créer
-                nom:null,               // son nom          // son prénom
-                photo:null,             // sa photo (nom du fichier)
-                naissance:null,         // sa date de naissance
-                nationalite:null        // sa nationalité
+            imageData:null,
+            listePays:[],
+            artistes:{
+                nom:null,
+                photo:null,
+                naissance:null,
+                nationalite:null
             },
 
-            refArtistes:null,     // Référence du participant à modifier
-            imgModifiee:false,       // Indique si l'image du participant a été modifiée, par défaut : non
-            photoActuelle:null       // Photo actuelle du participant
+            refArtistes:null,
+            imgModifiee:false,
+            photoActuelle:null
         }
     },
-    mounted(){ // Montage de la vue
-        // Récupération du id passé en paramètre
-        // On utilise le id passé par la route
-        // via la variable système $route de la vue
-console.log("id artistes", this.$route.params.id);
-        // Recherche participant concerné
+
+    mounted(){
+    console.log("id artistes", this.$route.params.id);
         this.getArtistes(this.$route.params.id);
-        // Appel de la liste des pays
         this.getPays();
     },
 
     methods :{
-
-        async getPays(){            
-            // Obtenir Firestore
+        async getPays(){
             const firestore = getFirestore();
-            // Base de données (collection)  document pays
             const dbPays = collection(firestore, "pays");
-            // Liste des participants triés
             const q = query(dbPays, orderBy('nom', 'asc'));
             await onSnapshot(q, (snapshot) => {
                 this.listePays = snapshot.docs.map(doc => (
@@ -156,31 +121,19 @@ console.log("id artistes", this.$route.params.id);
         },
 
         async getArtistes(id){
-            // Obtenir Firestore
             const firestore = getFirestore();
-            // Base de données (collection)  document participant
-            // Récupération sur Firestore du participant via son id
             const docRef = doc(firestore, "artistes", id);
-            // Référence du participant concerné
             this.refArtistes = await getDoc(docRef);
-            // Test si le participant demandé existe
             if(this.refArtistes.exists()){
-                // Si oui on récupère ses données
                 this.artistes = this.refArtistes.data();
-                // Mémorisation photoActuelle
                 this.photoActuelle = this.artistes.photo;
             }else{
-                // Sinon simple message d'erreur
                 this.console.log("Artiste inexistant");
             }
-            // Obtenir le Storage
             const storage = getStorage();
-            // Référence de l'image du participant
             const spaceRef = ref(storage, 'artistes/'+this.artistes.photo);
-            // Récupération de l'url complète de l'image
             getDownloadURL(spaceRef)
                 .then((url) => {
-                    // Mise à jour de l'image prévisualisée
                     this.imageData = url;
             })
             .catch((error) =>{
@@ -188,59 +141,35 @@ console.log("id artistes", this.$route.params.id);
             })
         },
 
-
         previewImage: function(event) {
-            // Mise à jour de la photo du participant
             this.file = this.$refs.file.files[0];
-            // Récupérer le nom du fichier pour la photo du participant
             this.artistes.photo = this.file.name;
-            // Si cette fonction s'exécute, c'est que l'image est modifiée 
             this.imgModifiee = true;
-            // Reference to the DOM input element
-            // Reference du fichier à prévisualiser
             var input = event.target;
-            // On s'assure que l'on a au moins un fichier à lire
             if (input.files && input.files[0]) {
-                // Creation d'un filereader
-                // Pour lire l'image et la convertir en base 64
                 var reader = new FileReader();
-                // fonction callback appellée lors que le fichier a été chargé
                 reader.onload = (e) => {
-                    // Read image as base64 and set to imageData
-                    // lecture du fichier pour mettre à jour 
-                    // la prévisualisation
                     this.imageData = e.target.result;
                 }
-                // Demarrage du reader pour la transformer en data URL (format base 64) 
                 reader.readAsDataURL(input.files[0]);        
             }
         },
 
         async updateArtistes(){
-            // Si l'image a été modifiée
             if(this.imgModifiee){
-                // On supprime l'ancienne
                 const storage = getStorage();
-                // Référence du fichier
                 let docRef = ref(storage, 'artites/'+this.photoActuelle);
-                // Suppression photo actuelle
                 deleteObject(docRef);
-                // création nouvelle photo
-                // Référence de l'image à uploader
                 docRef = ref(storage, 'artistes/'+this.artistes.photo);
                 await uploadString(docRef, this.imageData, 'data_url').then((snapshot) => {
                     console.log('Uploaded a base64 string', this.artistes.photo);                
                 });                   
             }
-            // Dans tous les cas on met à jour le participant dans Firestore
             const firestore = getFirestore();
-            // Modification du participant à partir de son id
             await updateDoc(doc(firestore, "artistes", this.$route.params.id), this.artistes);
-            // redirection sur la liste des participants
             this.$router.push('/artistes');       
         }
     }
-
 }
 </script>
 

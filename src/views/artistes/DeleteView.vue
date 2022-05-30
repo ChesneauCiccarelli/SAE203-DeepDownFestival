@@ -15,7 +15,6 @@
       <img class="md:max-h-[1000px]" src="../../../public/Logosdecor.jpg" alt="Logos du Deep Down Festival">
     </div>
   </div>
-</div>
 
   <section class="mt-[5%]">
     <h1 class="font-210-box italic text-5xl text-center mb-5">Supprimer un artiste</h1>
@@ -65,14 +64,15 @@
 
   <DDbas class="mt-[100px]"/>
 
+</div>
 </template>
 
 <script>
 import underline from "../../../src/components/decors/UnderlineView.vue"
 import DDbas from "../../../src/components/FooterView.vue"
 
-import { getFirestore, collection, doc, getDocs, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
-import { getStorage, ref, getDownloadURL, uploadString } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
+import { getFirestore, collection, doc, getDoc, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+import { getStorage, ref, getDownloadURL, uploadBytes, uploadString, deleteObject, listAll } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
 
 export default {
     name:'DeleteView',
