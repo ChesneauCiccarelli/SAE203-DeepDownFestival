@@ -12,6 +12,8 @@ import CreateArtistes     from      '../views/artistes/CreateView.vue'
 import UpdateArtistes    from      '../views/artistes/UpdateView.vue'
 import DeleteArtistes    from      '../views/artistes/DeleteView.vue'
 
+import Guidedestyle from "../views/GuidedestyleView.vue"
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -27,6 +29,8 @@ const router = createRouter({
     { path: '/CreateArtistes', name: 'CreateArtistes', component: CreateArtistes },
     { path: '/UpdateArtistes', name: 'UpdateArtistes', component: UpdateArtistes },
     { path: '/DeleteArtistes', name: 'DeleteArtistes', component: DeleteArtistes },
+
+    { path: '/style-guide', name: 'Guidedestyle', component: Guidedestyle },
   ]
 })
 

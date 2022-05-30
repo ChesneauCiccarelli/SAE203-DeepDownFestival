@@ -1,27 +1,27 @@
 <template>
-  <div class="flex flex-col justify-center items-center w-full relative gap-[25px] px-3 py-[25px] bg-white">
-
+  <div class="flex flex-col justify-center items-center w-full relative gap-[25px] px-3 py-[25px] bg-white dark:bg-sombre dark:border-t-2">
     <svg
       viewBox="0 0 351 1"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid meet"
+      class="dark:hidden"
     >
       <line x1="-4.37114e-8" y1="0.5" x2="351" y2="0.499969" stroke="#1D1D1B"></line>
     </svg>
 
     <div class="relative">
       <div class="w-[350px] h-[106px]">
-        <p class="w-[243.09px] absolute left-[106.91px] top-12 text-[50px] font-black text-center text-sombre">DOWN</p>
-        <p class="w-[198.55px] absolute left-0 top-0 text-[50px] font-black text-center text-sombre">DEEP</p>
+        <p class="w-[243.09px] absolute left-[106.91px] top-12 text-[50px] font-black text-center text-sombre dark:text-white">DOWN</p>
+        <p class="w-[198.55px] absolute left-0 top-0 text-[50px] font-black text-center text-sombre dark:text-white">DEEP</p>
       </div>
     </div>
     
     <img class="w-[450px]" src="../../public/logosnewletter.jpg" alt="Logos du Deep Down Festival">
 
     <div class="flex flex-col justify-center items-center relative">
-      <p class="text-3xl font-black italic text-center text-sombre">SUIVEZ-NOUS</p>
-      <div class="flex relative gap-5">
+      <p class="text-3xl font-black italic text-center text-sombre dark:text-white">SUIVEZ-NOUS</p>
+      <div class="flex relative gap-5 dark:bg-white dark:p-2 dark:rounded-2xl">
         <a href="https://www.facebook.com/">
           <img src="../../public/icons/svg/Brands/facebook.svg" alt="Logo Facebook">
         </a>
@@ -37,7 +37,7 @@
     <div class="flex justify-center items-center self-stretch gap-[50px]">
       <div class="flex flex-col justify-center items-center flex-grow relative">
           <router-link to="/contact">
-            <p class="font-cairo text-xs font-semibold text-center text-sombre">NOUS CONTACTER</p>
+            <p class="font-cairo text-xs font-semibold text-center text-sombre dark:text-white dark:border-b">NOUS CONTACTER</p>
           </router-link>
         <svg
           width="82"
@@ -52,7 +52,7 @@
       </div>
       <div class="flex flex-col justify-center items-center flex-grow relative">
           <router-link to="/ml">
-            <p class="font-cairo text-xs font-semibold text-center text-sombre">MENTIONS LEGALES</p>
+            <p class="font-cairo text-xs font-semibold text-center text-sombre dark:text-white dark:border-b">MENTIONS LEGALES</p>
           </router-link>
         <svg
           width="82"

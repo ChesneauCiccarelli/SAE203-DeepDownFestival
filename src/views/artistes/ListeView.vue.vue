@@ -13,7 +13,7 @@
     <div class="md:flex">
         <div class="flex-auto flex items-center">
             <SearchIcon class="w-6 h-6"/>
-            <input class="bg-sombre font-cairo font-semibold text-xl text-accent flex-auto" type="text" v-model="query" placeholder="Rechercher (ça marche, essayez)"/>  
+            <input class="bg-sombre font-cairo font-semibold text-xl text-accent flex-auto" type="text" v-model="query" placeholder="Rechercher"/>  
         </div>
         <underline/>
         <div>
