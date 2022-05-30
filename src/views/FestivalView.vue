@@ -1,5 +1,5 @@
 <template>
-<div class="pt-[90px]">
+<div class="md:pt-[90px]">
   <div class="festtop">
     <heading :titre="'LE FESTIVAL'" :text="'Découvrez en détail le DEEP DOWN Festival.'"/>
   </div>

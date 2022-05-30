@@ -1,7 +1,7 @@
 <template>
   <header>
     <Menu>
-      <div class=" flex mb-9 md:hidden m-[5%]">
+      <div class="flex mb-9 md:hidden m-[5%]">
         <div class="flex-auto">
           <router-link to="/">
             <img class="flex-auto h-[50px] w-[50px]" src="../public/icons/LogoDDBlanc.jpg" alt="Logo du festival Deep Down" >
