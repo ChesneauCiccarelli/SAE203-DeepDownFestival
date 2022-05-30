@@ -19,7 +19,7 @@
         <div class="card-header">
             <h5>Liste des artistes du Deep Down Festival
                 <span class="float-right" title="Ajouter un artiste">
-                    <router-link to="/createArtistes">
+                    <router-link to="/CreateArtistes">
                         <i class="fa fa-plus fa-lg text-light"></i>
                     </router-link>
                 </span>
@@ -102,12 +102,12 @@ export default {
               this.listeArtistes = snapshot.docs.map(doc => (
                   {id:doc.id, ...doc.data()}
               ))
-              this.listeArtistes.forEach(function(personne){
+              this.listeArtistes.forEach(function(art){
                   const storage = getStorage();
-                  const spaceRef = ref(storage, 'artistes/'+personne.photo);
+                  const spaceRef = ref(storage, 'artistes/'+art.photo);
                   getDownloadURL(spaceRef)
                   .then((url) => {
-                      personne.photo = url;
+                      art.photo = url;
                   })
                   .catch((error) =>{
                       console.log('erreur downloadUrl', error);

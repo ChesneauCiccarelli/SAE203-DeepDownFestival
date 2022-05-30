@@ -24,7 +24,7 @@ const router = createRouter({
     { path: '/programmation', name: 'Programmation', component: ProgrammationView },
 
     { path: '/artistes', name: 'ListeArtistes', component: ListeArtistes },
-    { path: '/CreateArtiste', name: 'CreateArtistes', component: CreateArtistes },
+    { path: '/CreateArtistes', name: 'CreateArtistes', component: CreateArtistes },
     { path: '/UpdateArtistes', name: 'UpdateArtistes', component: UpdateArtistes },
     { path: '/DeleteArtistes', name: 'DeleteArtistes', component: DeleteArtistes },
   ]
