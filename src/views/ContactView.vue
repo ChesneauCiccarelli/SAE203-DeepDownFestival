@@ -4,37 +4,37 @@
     <heading :titre="'PAGE DE CONTACT'" :text="'Pour nous contacter, remplisser le formulaire ci-dessous.'"/>
   </div>
 
-  <section class="mt-[5%] md:flex">
+  <section class="mt-[5%] md:flex gap-5">
     <div class="mb-[5%] md:mb-0 flex-auto">
-      <form>
+      <form @submit.prevent="submitFormulaire">
         <div>
           <div class="mt-5 mx-5">
-            <input class="w-full bg-sombre text-accent" type="text" placeholder="Nom">
+            <input class="w-full bg-sombre text-accent" type="text" placeholder="Nom" v-model="formulaire.nom" required>
           </div>
           <underline/>
           <div class="mt-5 mx-5">
-            <input class="w-full bg-sombre text-accent" type="text" placeholder="Prénom">
-          </div>
-          <underline/>
-        </div>
-
-        <div>
-          <div class="mt-5 mx-5">
-            <input class="w-full bg-sombre text-accent" type="email" placeholder="Email">
+            <input class="w-full bg-sombre text-accent" type="text" placeholder="Prénom" v-model="formulaire.prenom">
           </div>
           <underline/>
         </div>
 
         <div>
           <div class="mt-5 mx-5">
-            <textarea class="w-full bg-sombre text-accent" placeholder="Message" name="message" rows="3"></textarea>
+            <input class="w-full bg-sombre text-accent" type="email" placeholder="Email" v-model="formulaire.email" required>
+          </div>
+          <underline/>
+        </div>
+
+        <div>
+          <div class="mt-5 mx-5">
+            <textarea class="w-full bg-sombre text-accent" placeholder="Message" name="message" rows="3" v-model="formulaire.message" required></textarea>
           </div>
           <underline/>
         </div>
 
         <div class="mt-5 mx-5 text-center">
           <div>
-            <button type="submit" class="button font-210-d text-xl bg-white text-sombre px-8 py-4 rounded-full">ENVOYER</button>
+            <button type="submit" class="button font-210-d text-xl bg-white text-sombre px-8 py-4 rounded-full" @click="resetInput">ENVOYER</button>
           </div>
         </div>
       </form>
@@ -58,8 +58,52 @@ import heading from "../../src/components/HeadingsPageView.vue"
 import DDbas from "../../src/components/FooterView.vue"
 import underline from "../../src/components/decors/UnderlineView.vue"
 import newsletter from "../components/NewsletterView.vue"
+import { 
+    getFirestore,   // Obtenir le Firestore
+    collection,     // Utiliser une collection de documents
+    doc,            // Obtenir un document par son id
+    getDocs,        // Obtenir la liste des documents d'une collection
+    addDoc,         // Ajouter un document à une collection
+    updateDoc,      // Mettre à jour un document dans une collection
+    deleteDoc,      // Supprimer un document d'une collection
+    onSnapshot,     // Demander une liste de documents d'une collection, en les synchronisant
+    query,          // Permet d'effectuer des requêtes sur Firestore
+    orderBy         // Permet de demander le tri d'une requête query
+    } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+
+
+    // Cloud Storage : import des fonctions
+    import { 
+        getStorage,             // Obtenir le Cloud Storage
+        ref,                    // Pour créer une référence à un fichier à uploader
+        getDownloadURL,         // Permet de récupérer l'adress complète d'un fichier du Storage
+        uploadString,           // Permet d'uploader sur le Cloud Storage une image en Base64
+    } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
+
 export default {
+  name:'ContactView',
   components: { heading, DDbas, underline, newsletter },
+  data() {
+      return {
+          formulaire:{           // Le participant à créer
+              nom:null,               // son nom
+              prenom:null,            // son prénom
+              email:null,             // sa photo (nom du fichier)
+              message:null,         // sa date de naissance
+          }
+      }
+  },
+  methods : {
+        async submitFormulaire(){
+                
+            // Création du participant sur le Firestore
+            const db = getFirestore();
+            const docRef = addDoc(collection(db, 'formulaire'), this.formulaire );
+            // redirection sur la liste des participants
+            alert('Votre message a bien été envoyé');
+            this.$router.push('/contact');   
+       },
+  }
 }
 </script>
 
@@ -69,7 +113,7 @@ export default {
   background-position: center;
 }
 .button{
-  box-shadow:inset 0px 0px 15px 3px red;
+  box-shadow:inset 0px 5px 10px 1px rgba(255, 0, 0, 0.5);
 }
 input::placeholder, textarea::placeholder{
   color: white;

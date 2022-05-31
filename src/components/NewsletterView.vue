@@ -83,6 +83,7 @@ export default {
       const db = getFirestore();
       const docRef = addDoc(collection(db, 'abonnesnewsletter'), this.abonnesnewsletter );
       alert('Suivi de notre newsletter pris en compte. Merci pour votre confiance.')
+      this.$router.push('/');   
       }         
     }
   }
