@@ -212,6 +212,7 @@ import { LocationMarkerIcon } from "@heroicons/vue/outline"
 import carrousel from "../components/CarrouselView.vue"
 import images from "../components/ImageView.vue"
 import DDbas from "../../src/components/FooterView.vue"
+
 export default {
   components: { underline, agenda, LocationMarkerIcon, carrousel, images, DDbas }
 }

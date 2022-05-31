@@ -174,6 +174,7 @@ import images from "../../src/components/ImageView.vue"
 import newsletter from "../../src/components/NewsletterView.vue"
 import programme from "../components/ProgrammeView.vue"
 import { LocationMarkerIcon, MenuIcon, CalendarIcon, SearchIcon } from "@heroicons/vue/outline"
+
 export default {
   components: { DDbas, underline, LocationMarkerIcon, MenuIcon, CalendarIcon, SearchIcon, agenda, boutondouble, boutonsimple, module, logos, carrousel, images, newsletter, programme },
 }

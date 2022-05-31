@@ -124,14 +124,18 @@ import underline from "../../../src/components/decors/UnderlineView.vue"
 import DDbas from "../../../src/components/FooterView.vue"
 import { SaveIcon, XIcon, PencilAltIcon } from "@heroicons/vue/outline"
 
-import { getFirestore, collection, doc, getDocs, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
-import { getStorage, ref, getDownloadURL, uploadString } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
+import { getFirestore, collection, doc, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+import { getStorage, ref, uploadString } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
 
  
 export default {
+
     name:'CreateView',
+
     components:{ underline, DDbas, SaveIcon, XIcon, PencilAltIcon },
+
     data() {
+
         return {
             imageData:null,
             listePays:[],
@@ -142,11 +146,15 @@ export default {
                 nationalite:null
             },
         }
+
     },
+
     mounted(){
         this.getPays();
     },
+
     methods : {
+
         async getPays(){
             const firestore = getFirestore();
             const dbPays = collection(firestore, "pays");          
@@ -175,6 +183,7 @@ export default {
             nom:pays.nom
           })       
         },
+
         async deletePays(pays){
           const firestore = getFirestore();
           const docRef = doc(firestore, "pays", pays.id);
@@ -204,7 +213,9 @@ export default {
             });
             this.$router.push('/artistes');            
         }
+
     }
+    
 }
 </script>
 

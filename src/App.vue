@@ -62,6 +62,7 @@
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 import { MenuIcon } from "@heroicons/vue/outline";
 import DDbas from "../src/components/FooterView.vue"
+
 export default {
   components: { MenuIcon, Menu, MenuButton, MenuItems, MenuItem, DDbas },
 };

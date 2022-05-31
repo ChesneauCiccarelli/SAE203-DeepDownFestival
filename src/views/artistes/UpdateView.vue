@@ -125,13 +125,16 @@ import DDbas from "../../../src/components/FooterView.vue"
 import { SaveIcon, XIcon, PencilAltIcon } from "@heroicons/vue/outline"
 
 import { getFirestore, collection, doc, getDoc, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
-import { getStorage, ref, getDownloadURL, uploadBytes, uploadString, deleteObject, listAll } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
+import { getStorage, ref, getDownloadURL, uploadString, deleteObject } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
 
 export default {
+
     name:'UpdateView',
+
     components:{ underline, DDbas, SaveIcon, XIcon, PencilAltIcon },
 
     data() {
+
         return {
             imageData:null,
             listePays:[],
@@ -141,20 +144,23 @@ export default {
                 naissance:null,
                 nationalite:null
             },
-
             refArtistes:null,
             imgModifiee:false,
             photoActuelle:null
         }
+
     },
 
     mounted(){
-    console.log("id artistes", this.$route.params.id);
+
+        console.log("id artistes", this.$route.params.id);
         this.getArtistes(this.$route.params.id);
         this.getPays();
+
     },
 
     methods :{
+
         async getPays(){
             const firestore = getFirestore();
             const dbPays = collection(firestore, "pays");
@@ -182,6 +188,7 @@ export default {
             nom:pays.nom
           })       
         },
+
         async deletePays(pays){
           const firestore = getFirestore();
           const docRef = doc(firestore, "pays", pays.id);
@@ -237,7 +244,9 @@ export default {
             await updateDoc(doc(firestore, "artistes", this.$route.params.id), this.artistes);
             this.$router.push('/artistes');       
         }
+
     }
+    
 }
 </script>
 

@@ -114,6 +114,7 @@ import bouton from "../components/bouttons/BouttonView.vue"
 import composant from "../components/bouttons/ComposantView.vue"
 import newsletter from "../components/NewsletterView.vue"
 import DDbas from "../../src/components/FooterView.vue"
+
 export default {
   components: { carrousel, images, bouton, composant, newsletter, DDbas },
 };

@@ -196,6 +196,7 @@
 <script>
 import DDbas from "../../src/components/FooterView.vue"
 import bouton from "../../src/components/bouttons/BouttonView.vue"
+
 export default {
   components: { DDbas, bouton } 
 }

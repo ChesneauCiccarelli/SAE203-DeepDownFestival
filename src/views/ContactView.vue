@@ -58,52 +58,38 @@ import heading from "../../src/components/HeadingsPageView.vue"
 import DDbas from "../../src/components/FooterView.vue"
 import underline from "../../src/components/decors/UnderlineView.vue"
 import newsletter from "../components/NewsletterView.vue"
-import { 
-    getFirestore,   // Obtenir le Firestore
-    collection,     // Utiliser une collection de documents
-    doc,            // Obtenir un document par son id
-    getDocs,        // Obtenir la liste des documents d'une collection
-    addDoc,         // Ajouter un document à une collection
-    updateDoc,      // Mettre à jour un document dans une collection
-    deleteDoc,      // Supprimer un document d'une collection
-    onSnapshot,     // Demander une liste de documents d'une collection, en les synchronisant
-    query,          // Permet d'effectuer des requêtes sur Firestore
-    orderBy         // Permet de demander le tri d'une requête query
-    } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
-
-
-    // Cloud Storage : import des fonctions
-    import { 
-        getStorage,             // Obtenir le Cloud Storage
-        ref,                    // Pour créer une référence à un fichier à uploader
-        getDownloadURL,         // Permet de récupérer l'adress complète d'un fichier du Storage
-        uploadString,           // Permet d'uploader sur le Cloud Storage une image en Base64
-    } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
+import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
 
 export default {
+
   name:'ContactView',
+
   components: { heading, DDbas, underline, newsletter },
+
   data() {
+
       return {
-          formulaire:{           // Le participant à créer
-              nom:null,               // son nom
-              prenom:null,            // son prénom
-              email:null,             // sa photo (nom du fichier)
-              message:null,         // sa date de naissance
+          formulaire:{
+              nom:null,
+              prenom:null,
+              email:null,
+              message:null,
           }
       }
+
   },
+
   methods : {
+
         async submitFormulaire(){
-                
-            // Création du participant sur le Firestore
             const db = getFirestore();
             const docRef = addDoc(collection(db, 'formulaire'), this.formulaire );
-            // redirection sur la liste des participants
             alert('Votre message a bien été envoyé');
             this.$router.push('/contact');   
        },
+
   }
+  
 }
 </script>
 

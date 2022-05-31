@@ -69,23 +69,32 @@ import logos from "../../src/components/decors/LogosSeparationView.vue"
 import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
 
 export default {
+
   name:'NewsletterView',
+
   components: {logos},
+
   data() {
+
       return {
           abonnesnewsletter:{
               mail:null,
       }
     }
+
   },
+
   methods : {
-    async newabonneNewsletter(){
-      const db = getFirestore();
-      const docRef = addDoc(collection(db, 'abonnesnewsletter'), this.abonnesnewsletter );
-      alert('Suivi de notre newsletter pris en compte. Merci pour votre confiance.')
-      this.$router.push('/');   
-      }         
+
+      async newabonneNewsletter(){
+        const db = getFirestore();
+        const docRef = addDoc(collection(db, 'abonnesnewsletter'), this.abonnesnewsletter );
+        alert('Suivi de notre newsletter pris en compte. Merci pour votre confiance.')
+        this.$router.push('/');   
+      }     
+          
     }
+
   }
 </script>
 

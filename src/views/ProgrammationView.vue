@@ -42,6 +42,7 @@ import separation from "../../src/components/decors/LogosSeparationView.vue"
 import programme from "../../src/components/ProgrammeView.vue"
 import boutonblanc from "../../src/components/bouttons/Boutton1Blanc.vue"
 import DDbas from "../../src/components/FooterView.vue"
+
 export default {
   components: { heading, separation, programme, boutonblanc, DDbas }
 }

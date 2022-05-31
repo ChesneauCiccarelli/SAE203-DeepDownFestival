@@ -151,9 +151,13 @@
 
 <script>
 import images from "../components/ImageView.vue"
+
 export default {
+
   components: { images },
+
   props:{
+
     titre: {
       type: String,
       default: 'Titre',
@@ -218,7 +222,9 @@ export default {
       type: String,
       default: 'Artiste10',
       },
+      
   },
+
 }
 </script>
 

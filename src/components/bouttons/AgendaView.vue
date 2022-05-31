@@ -7,6 +7,7 @@
 
 <script>
 import { CalendarIcon } from '@heroicons/vue/outline'
+
 export default {
   components: { CalendarIcon},
 }

@@ -20,7 +20,9 @@
 
 <script>
 export default {
+
       props:{
+
       text1: {
         type: String,
         default: 'Text',
@@ -29,7 +31,9 @@ export default {
         type: String,
         default: 'Text',
         },
+
   },
+  
 }
 </script>
 

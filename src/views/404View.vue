@@ -79,6 +79,7 @@
 import underline from "../../src/components/decors/UnderlineView.vue"
 import DDbas from "../../src/components/FooterView.vue"
 import bouton from "../../src/components/bouttons/Boutton1Blanc.vue"
+
 export default {
   components:{ underline, DDbas, bouton },
 }

@@ -58,6 +58,7 @@ import images from "../../src/components/ImageView.vue"
 import agenda from "../../src/components/bouttons/AgendaView.vue"
 import separation from "../../src/components/decors/LogosSeparationView.vue"
 import DDbas from "../../src/components/FooterView.vue"
+
 export default {
   components: { heading, images, agenda, DDbas, separation },
 };

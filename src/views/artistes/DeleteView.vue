@@ -71,12 +71,15 @@
 import underline from "../../../src/components/decors/UnderlineView.vue"
 import DDbas from "../../../src/components/FooterView.vue"
 
-import { getFirestore, collection, doc, getDoc, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
-import { getStorage, ref, getDownloadURL, uploadBytes, uploadString, deleteObject, listAll } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
+import { getFirestore, doc, getDoc, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+import { getStorage, ref, getDownloadURL, deleteObject } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
 
 export default {
+
     name:'DeleteView',
+
     components:{ underline, DDbas },
+
     data() {
         return {
             artistes:{
@@ -85,14 +88,16 @@ export default {
                 naissance:null,
                 nationalite:null
             },
-
             refArtistes:null,
             photoActuelle:null
         }
     },
+
     mounted(){
-    console.log("id artistes", this.$route.params.id);
+
+      console.log("id artistes", this.$route.params.id);
         this.getArtistes(this.$route.params.id);
+
     },
 
     methods :{
@@ -126,6 +131,7 @@ export default {
             deleteObject(docRef);
             this.$router.push('/artistes');       
         }
+        
     }
 
 }

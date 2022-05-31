@@ -72,31 +72,42 @@ import heading from "../../components/HeadingsPageView.vue"
 import DDbas from "../../components/FooterView.vue"
 import { SearchIcon, PlusIcon, XIcon, PencilAltIcon } from "@heroicons/vue/outline"
 import underline from "../../components/decors/UnderlineView.vue"
-import { getFirestore, collection, doc, getDocs, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
-import { getStorage, ref, getDownloadURL, uploadString } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
+import { getFirestore, collection, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+import { getStorage, ref, getDownloadURL } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
 
 export default {
+
   name:'ArtistesView',
+
   components: { heading, DDbas, SearchIcon, PlusIcon, XIcon, PencilAltIcon, underline },
+
   data() {
-    return {
+
+        return {
             listeArtistes:[],
             viewFilter_1:false,
             query:''
         }
+
     },
+
   mounted(){
       this.getArtistes();
   },
+
   computed:{
+
         searchByName() {
             let query = this.query;
             return this.listeArtistes.filter(function(art){
                 return art.nom.includes(query);
             })                
         },
+
   },
+
   methods: {
+
       async getArtistes(){
           const firestore = getFirestore();
           const dbPart = collection(firestore, "artistes");
@@ -122,9 +133,8 @@ export default {
           let date = d.split('-');
           return date[2]+'/'+date[1]+'/'+date[0];
       }
-
   }
-  }
+}
 
 </script>
 

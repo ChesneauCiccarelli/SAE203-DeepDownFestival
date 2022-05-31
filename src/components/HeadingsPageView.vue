@@ -18,9 +18,13 @@
 
 <script>
 import underline from "../../src/components/decors/UnderlineView.vue"
+
 export default {
+
     components: { underline },
+
     props:{
+
       titre: {
         type: String,
         default: 'Titre',
@@ -29,7 +33,9 @@ export default {
         type: String,
         default: 'Text',
         },
+
   },
+  
 }
 </script>
 

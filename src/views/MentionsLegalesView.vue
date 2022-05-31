@@ -48,6 +48,7 @@
 <script>
 import underline from "../../src/components/decors/UnderlineView.vue"
 import DDbas from "../../src/components/FooterView.vue"
+
 export default {
     components: { underline, DDbas },
 }

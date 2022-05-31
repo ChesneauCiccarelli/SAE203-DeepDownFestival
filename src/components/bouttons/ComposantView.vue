@@ -10,16 +10,21 @@
 
 <script>
 export default {
+
       props:{
+
       titre: {
         type: String,
         default: 'Titre',
         },
+
       text: {
         type: String,
         default: 'Text',
         },
+
   },
+
 }
 </script>
 
