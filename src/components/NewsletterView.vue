@@ -6,10 +6,10 @@
         <p class="text-3xl font-210-box font-black italic text-center text-sombre">NEWSLETTER</p>
         <p class="text-xl font-black text-center text-sombre">RESTEZ INFORMÉ</p>
       </div>
-      <form class="self-stretch flex-grow-0 flex-shrink-0">
+      <form class="self-stretch flex-grow-0 flex-shrink-0" @submit.prevent="newabonneNewsletter">
         <div>
           <label class="font-black font-210 text-left text-sombre" for="email">Email</label>
-          <input class="w-full border-2 border-accent rounded-2xl" type="email" name="email"/>
+          <input class="w-full border-2 border-accent rounded-xl text-sombre pl-3" type="email" name="email" v-model="abonnesnewsletter.mail" required/>
         </div>
         <svg
           viewBox="0 0 315 13"
@@ -52,7 +52,7 @@
         </defs>
         </svg>
         <div class="text-center flex gap-5 justify-center align-middle mt-5">
-          <input type="checkbox">
+          <input type="checkbox" required>
           <label class="font-semibold font-cairo text-sm text-center text-sombre" for="RGPD">J’accepte de partager mes données avec l’administrateur du site web pour qu’il puisse m’envoyer les dernières nouveautées par mail</label>
         </div>
         <div class="flex justify-center align-middle mt-6">
@@ -66,9 +66,26 @@
 
 <script>
 import logos from "../../src/components/decors/LogosSeparationView.vue"
+import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+
 export default {
-  components: {logos}
-}
+  name:'NewsletterView',
+  components: {logos},
+  data() {
+      return {
+          abonnesnewsletter:{
+              mail:null,
+      }
+    }
+  },
+  methods : {
+    async newabonneNewsletter(){
+      const db = getFirestore();
+      const docRef = addDoc(collection(db, 'abonnesnewsletter'), this.abonnesnewsletter );
+      alert('Suivi de notre newsletter pris en compte. Merci pour votre confiance.')
+      }         
+    }
+  }
 </script>
 
 <style>
