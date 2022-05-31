@@ -14,13 +14,22 @@
         fill="white"
       ></path>
     </svg>
-    <p class="w-[325px] absolute top-[7.8px] text-xl font-210-d text-center text-sombre">JE VEUX <br/> MA PLACE</p>
+    <p class="w-[325px] absolute top-[7.8px] text-xl font-210-d text-center text-sombre">{{text1}}<br/>{{text2}}</p>
   </div>
 </template>
 
 <script>
 export default {
-
+      props:{
+      text1: {
+        type: String,
+        default: 'Text',
+        },
+      text2: {
+        type: String,
+        default: 'Text',
+        },
+  },
 }
 </script>
 

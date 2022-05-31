@@ -134,6 +134,26 @@
       <CalendarIcon class="h-[50px] w-[50px]"/>
       <SearchIcon class="h-[50px] w-[50px]"/>
     </div>
+    <h2 class="font-210 text-xl mt-[5%]">Composants</h2>
+      <agenda class="my-5 m-auto"/>
+      <hr>
+      <boutonsimple class="my-5 m-auto"/>
+      <hr>
+      <boutondouble class="my-5 m-auto"/>
+      <hr>
+      <module class="my-5"/>
+      <hr>
+      <logos class="my-5"/>
+      <hr>
+      <underline class="my-5"/>
+      <hr>
+      <carrousel class="my-5"/>
+      <hr>
+      <images class="my-5"/>
+      <hr>
+      <newsletter class="my-5"/>
+      <hr>
+      <programme class="my-5"/>
   </section>
 
   <DDbas class="mt-[100px]"/>
@@ -144,8 +164,17 @@
 <script>
 import underline from "../../src/components/decors/UnderlineView.vue"
 import DDbas from "../../src/components/FooterView.vue"
+import agenda from "../../src/components/bouttons/AgendaView.vue"
+import boutondouble from "../../src/components/bouttons/BouttonView.vue"
+import boutonsimple from "../../src/components/bouttons/Boutton1Blanc.vue"
+import module from "../../src/components/bouttons/ComposantView.vue"
+import logos from "../../src/components/decors/LogosSeparationView.vue"
+import carrousel from "../../src/components/CarrouselView.vue"
+import images from "../../src/components/ImageView.vue"
+import newsletter from "../../src/components/NewsletterView.vue"
+import programme from "../components/ProgrammeView.vue"
 import { LocationMarkerIcon, MenuIcon, CalendarIcon, SearchIcon } from "@heroicons/vue/outline"
 export default {
-  components: { DDbas, underline, LocationMarkerIcon, MenuIcon, CalendarIcon, SearchIcon },
+  components: { DDbas, underline, LocationMarkerIcon, MenuIcon, CalendarIcon, SearchIcon, agenda, boutondouble, boutonsimple, module, logos, carrousel, images, newsletter, programme },
 }
 </script>
