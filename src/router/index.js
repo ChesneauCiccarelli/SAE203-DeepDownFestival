@@ -12,6 +12,8 @@ import CreateArtistes     from      '../views/artistes/CreateView.vue'
 import UpdateArtistes    from      '../views/artistes/UpdateView.vue'
 import DeleteArtistes    from      '../views/artistes/DeleteView.vue'
 
+import NotFound from '../views/404View.vue'
+
 import Guidedestyle from "../views/GuidedestyleView.vue"
 
 const router = createRouter({
@@ -30,8 +32,19 @@ const router = createRouter({
     { path: '/UpdateArtistes', name: 'UpdateArtistes', component: UpdateArtistes },
     { path: '/DeleteArtistes', name: 'DeleteArtistes', component: DeleteArtistes },
 
+    {path: '/404', name: 'NotFound', component: NotFound},
+    {path: '/:catchAll(.*)', redirect:'404'},
+
     { path: '/style-guide', name: 'Guidedestyle', component: Guidedestyle },
   ]
+});
+
+router.beforeEach((to, from, next) => {
+  if (!to.matched.length) {
+  	next('/notFound');
+  } else {
+  	next();
+  }
 })
 
 export default router

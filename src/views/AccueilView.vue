@@ -1,7 +1,7 @@
 <template>
   <div class="md:pt-[90px]">
-    <div class="md:flex md:max-h-[830px]">
-      <div class="hometop md:w-[50%] py-20">
+    <div class="hometop md:flex md:max-h-[830px]">
+      <div class=" md:w-[50%] py-20">
         <img class="m-auto md:flex-auto" src="../../public/icons/svg/hometop.svg" alt="Illustration">
       </div>
       <div class="md:m-auto">
@@ -52,7 +52,7 @@
       <p class="font-210 text-5xl text-center">P<strong class="text-accent neon">O</strong>UR</p>
       <p class="font-210 text-5xl text-center">V<strong class="text-accent neon">O</strong>US</p>
       <router-link to="/programmation">
-        <bouton class="mx-auto"/>
+        <bouton class="mx-auto" :text1="'JE VEUX'" :text2="'MA PLACE'"/>
       </router-link>
     </div>
 

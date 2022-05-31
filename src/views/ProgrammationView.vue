@@ -26,7 +26,7 @@
     <separation/>
     <programme :titre="'Jour 3'" :date="'29 MAI 2022'" :heure="'14H00 - 21H00'" :genre1="'TECHNO'" :genre2="'ELECTRO'" :genre3="'HOUSE'" :artiste1="'Disclosure'" :artiste2="'Justice'" :artiste3="'Solomon'" :artiste4="'Petit Biscuit'" :artiste5="'Skrillex'" :artiste6="'Marshmellow'" :artiste7="'Tiësto'" :artiste8="'Moodyman'" :artiste9="'Alan Walker'" :artiste10="'Invité Mystère'"/>
     <router-link to="/concert">
-      <boutonblanc class="m-auto" :text="'DECOUVRIR'"/>
+      <boutonblanc class="my-[5%] m-auto" :text="'DECOUVRIR'"/>
     </router-link>
     <separation/>
   </div>

@@ -184,23 +184,7 @@
     <section class="mt-[5%] fondronds p-5 rounded-3xl w-[500px] m-auto">
       <p class="font-cairo text-xl font-semibold text-center">Retrouvez-le le <strong>27, 28 et 29 mai 2022</strong> sur la grande scène du <strong>DEEP DOWN Festival</strong>.</p>
       <router-link to="/programmation">
-        <div class="w-[325px] h-[70px] relative m-auto mt-7">
-          <svg
-            width="299"
-            height="70"
-            viewBox="0 0 299 70"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="mx-auto"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M52.5043 3.00873L3.61412 53.0087C-2.57667 59.3401 1.90907 70 10.7641 70H239.346C242.037 70 244.614 68.9154 246.496 66.9913L295.386 16.9913C301.577 10.6599 297.091 0 288.236 0H59.6543C56.9632 0 54.3857 1.08462 52.5043 3.00873Z"
-              fill="white"
-            ></path>
-          </svg>
-          <p class="w-[310px] absolute top-[7.8px] text-xl font-210-d text-center text-sombre">VOIR LE<br/>PROGRAMME</p>
-        </div>
+        <bouton class="m-auto mt-7" :text1="'VOIR LE'" :text2="'PROGRAMME'"/>
       </router-link>
     </section>
 
@@ -211,8 +195,9 @@
 
 <script>
 import DDbas from "../../src/components/FooterView.vue"
+import bouton from "../../src/components/bouttons/BouttonView.vue"
 export default {
-  components: { DDbas } 
+  components: { DDbas, bouton } 
 }
 </script>
 
