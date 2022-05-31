@@ -51,10 +51,10 @@
     </section>
 
     <div class="fondronds my-[5%]">
-      <p class="font-210 text-5xl text-center">TR<strong class="text-accent neon">O</strong>IS</p>
-      <p class="font-210 text-5xl text-center">J<strong class="text-accent neon">O</strong>URS</p>
-      <p class="font-210 text-5xl text-center">P<strong class="text-accent neon">O</strong>UR</p>
-      <p class="font-210 text-5xl text-center">V<strong class="text-accent neon">O</strong>US</p>
+      <p class="font-210 text-5xl text-center">TR<strong class="text-accent neon fade">O</strong>IS</p>
+      <p class="font-210 text-5xl text-center">J<strong class="text-accent neon fade">O</strong>URS</p>
+      <p class="font-210 text-5xl text-center">P<strong class="text-accent neon fade">O</strong>UR</p>
+      <p class="font-210 text-5xl text-center">V<strong class="text-accent neon fade">O</strong>US</p>
       <router-link to="/programmation">
         <bouton class="mx-auto" :text1="'JE VEUX'" :text2="'MA PLACE'"/>
       </router-link>
@@ -162,5 +162,20 @@ div#slider figure img { width: 20%; height: auto; float: left; }
   75% { left: -300%; }
   95% { left: -300%; }
   100% { left: -400%; }
+}
+.fade{
+  animation: fade 6s ease 0s infinite normal forwards;
+}
+@keyframes fade {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0.7;
+	}
 }
 </style>
