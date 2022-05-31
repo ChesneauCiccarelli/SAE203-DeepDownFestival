@@ -72,7 +72,7 @@
     </div>
   </section>
 
-  <section class="mt-[5%]">
+  <section class="mt-[10%] md:mt-[5%]">
     <h1 class="font-210-box italic text-5xl text-center mb-5">Modifier la liste deroulante des pays</h1>
     <div>
         <div class="flex items-center gap-2 mb-3">
