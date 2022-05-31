@@ -13,6 +13,10 @@
     <separation/>
   </div>
 
+    <section class="h-[18rem] my-[5%]">
+      <animation/>
+    </section>
+
   <div class="mt-[5%]">
     <separation/>
     <programme :titre="'Jour 2'" :date="'28 MAI 2022'" :heure="'19H00 - 9H00'" :genre1="'CHILLOUT'" :genre2="'DOWN TEMPO'" :genre3="'EXPERIMENTAL'" :artiste1="'Disclosure'" :artiste2="'Petit Biscuit'" :artiste3="'Solomon'" :artiste4="'Hallucinogen'" :artiste5="'Kungs'" :artiste6="'Justice'" :artiste7="'Marshmellow'" :artiste8="'Moodyman'" :artiste9="'Flume'" :artiste10="'LUUUL'"/>
@@ -21,6 +25,10 @@
     </router-link>
     <separation/>
   </div>
+
+    <section class="h-[18rem] my-[5%]">
+      <animation/>
+    </section>
 
   <div class="mt-[5%]">
     <separation/>
@@ -42,9 +50,10 @@ import separation from "../../src/components/decors/LogosSeparationView.vue"
 import programme from "../../src/components/ProgrammeView.vue"
 import boutonblanc from "../../src/components/bouttons/Boutton1Blanc.vue"
 import DDbas from "../../src/components/FooterView.vue"
+import animation from "../../src/components/decors/AnimationView.vue"
 
 export default {
-  components: { heading, separation, programme, boutonblanc, DDbas }
+  components: { heading, separation, programme, boutonblanc, DDbas, animation }
 }
 </script>
 

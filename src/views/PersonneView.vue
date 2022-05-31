@@ -61,6 +61,10 @@
       </div>
     </section>
 
+    <section class="h-[18rem] my-[5%]">
+      <animation/>
+    </section>
+
     <h1 class="font-210 text-3xl text-center mt-[5%]">Les titres phares</h1>
     <div class="grid grid-cols-[repeat(auto-fit,200px)] gap-5 justify-center mt-5">
       <div>
@@ -196,9 +200,10 @@
 <script>
 import DDbas from "../../src/components/FooterView.vue"
 import bouton from "../../src/components/bouttons/BouttonView.vue"
+import animation from "../../src/components/decors/AnimationView.vue"
 
 export default {
-  components: { DDbas, bouton } 
+  components: { DDbas, bouton, animation } 
 }
 </script>
 

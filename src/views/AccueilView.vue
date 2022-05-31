@@ -46,6 +46,10 @@
       </div>
     </section>
 
+    <section class="h-[18rem] my-[5%]">
+      <animation/>
+    </section>
+
     <div class="fondronds my-[5%]">
       <p class="font-210 text-5xl text-center">TR<strong class="text-accent neon">O</strong>IS</p>
       <p class="font-210 text-5xl text-center">J<strong class="text-accent neon">O</strong>URS</p>
@@ -114,9 +118,10 @@ import bouton from "../components/bouttons/BouttonView.vue"
 import composant from "../components/bouttons/ComposantView.vue"
 import newsletter from "../components/NewsletterView.vue"
 import DDbas from "../../src/components/FooterView.vue"
+import animation from "../../src/components/decors/AnimationView.vue"
 
 export default {
-  components: { carrousel, images, bouton, composant, newsletter, DDbas },
+  components: { carrousel, images, bouton, composant, newsletter, DDbas, animation },
 };
 </script>
 

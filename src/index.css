@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  box-sizing: border-box;
+}
+
 body {
   background-color: #1d1d1b;
   color: white;
