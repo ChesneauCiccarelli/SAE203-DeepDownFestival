@@ -6,7 +6,7 @@
   </div>
 
   <section class="mt-[5%]">
-      <h1 class="neon font-210-box italic text-5xl text-center mb-5">Les artistes presents au Deep Down Festival</h1>
+      <h1 class="neon font-210-box italic text-5xl text-center mb-5 leading-tight">Les artistes presents au Deep Down Festival</h1>
   </section>
 
   <section class="mt-[5%]">

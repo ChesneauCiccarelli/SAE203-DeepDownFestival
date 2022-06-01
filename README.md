@@ -15,6 +15,7 @@ Pour l'exercice sur le dark mode et étant donné que mon site est plûtot sombr
 Exercices réalisés
 
 - Liste syncronisée des artistes (/artistes)
+- Champ de recherche dans la page artiste (/artistes)
 - Création d'un artiste (/CreateArtistes)
 - Modification d'un artiste (/UpdateArtistes)
 - Suppression d'un artiste (/DeleteArtistes)
