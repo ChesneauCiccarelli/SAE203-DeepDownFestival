@@ -2,17 +2,17 @@
   <div class="md:pt-[90px]">
     <div class="md:flex md:max-h-[830px]">
       <div class="m-auto">
-        <img class="m-auto max-h-[500px] md:flex-auto" src="../../../public/logosx3.jpg" alt="Illustration Deep Down">
+        <img class="m-auto max-h-[500px] md:flex-auto" src="../../public/logosx3.jpg" alt="Illustration Deep Down">
         <div class="my-[10%]">
           <div class="mt-[5%] mb-2 flex justify-center">
             <h1 class="font-210 text-5xl text-center">ERREUR 404</h1>
           </div>
           <underline/>
         </div>
-        <img class="m-auto max-h-[500px] md:flex-auto" src="../../../public/logosx3.jpg" alt="Illustration Deep Down">
+        <img class="m-auto max-h-[500px] md:flex-auto" src="../../public/logosx3.jpg" alt="Illustration Deep Down">
       </div>
       <div class="md:m-auto">
-        <img class="md:max-h-[1000px]" src="../../../public/Logosdecor.jpg" alt="Logos du Deep Down Festival">
+        <img class="md:max-h-[1000px]" src="../../public/Logosdecor.jpg" alt="Logos du Deep Down Festival">
       </div>
     </div>
 
