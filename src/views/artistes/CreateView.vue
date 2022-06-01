@@ -84,7 +84,7 @@
                 <SaveIcon class="w-6 h-6"/>
               </button>                  
         </div>
-        <div class="mt-[5%]">
+        <div class="mt-[5%] overflow-x-auto">
           <table class="w-fit m-auto">
             <thead>
                 <tr>
