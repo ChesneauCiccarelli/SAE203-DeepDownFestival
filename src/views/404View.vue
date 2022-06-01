@@ -23,8 +23,8 @@
       <div class="md:flex md:justify-evenly mt-[10%] md:mt-[5%]">
         <div class="my-auto">
           <h2 class="font-210 text-3xl text-center mb-5 mt-[5%]" >Revenir a l'accueuil</h2>
-          <router-link to="/">
-            <bouton class="mx-auto" :text="'ACCUEUIL'"/>
+          <router-link to="/" class="text-center">
+            <bouton :text="'ACCUEUIL'"/>
           </router-link>
         </div>
         <div class="mt-[10%] md:mt-0">
@@ -78,7 +78,7 @@
 <script>
 import underline from "../../src/components/decors/UnderlineView.vue"
 import DDbas from "../../src/components/FooterView.vue"
-import bouton from "../../src/components/bouttons/Boutton1Blanc.vue"
+import bouton from "../../src/components/bouttons/ButtonWhite.vue"
 
 export default {
   components:{ underline, DDbas, bouton },

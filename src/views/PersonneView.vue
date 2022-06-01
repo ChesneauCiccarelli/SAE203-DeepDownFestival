@@ -186,9 +186,9 @@
       </div>
 
     <section class="mt-[5%] fondronds p-5 rounded-3xl w-[500px] m-auto">
-      <p class="font-cairo text-xl font-semibold text-center">Retrouvez-le le <strong>27, 28 et 29 mai 2022</strong> sur la grande scène du <strong>DEEP DOWN Festival</strong>.</p>
-      <router-link to="/programmation">
-        <bouton class="m-auto mt-7" :text1="'VOIR LE'" :text2="'PROGRAMME'"/>
+      <p class="font-cairo text-xl font-semibold text-center mb-3">Retrouvez-le le <strong>27, 28 et 29 mai 2022</strong> sur la grande scène du <strong>DEEP DOWN Festival</strong>.</p>
+      <router-link to="/programmation" class="text-center">
+        <bouton :text="'PROGRAMMATION'"/>
       </router-link>
     </section>
 
@@ -199,7 +199,7 @@
 
 <script>
 import DDbas from "../../src/components/FooterView.vue"
-import bouton from "../../src/components/bouttons/BouttonView.vue"
+import bouton from "../../src/components/bouttons/ButtonWhite.vue"
 import animation from "../../src/components/decors/AnimationView.vue"
 
 export default {

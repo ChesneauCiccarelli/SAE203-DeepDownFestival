@@ -1,35 +1,39 @@
 <template>
-  <button class="flex glow align-middle gap-5 bg-sombre border-2 border-accent px-9 py-2 rounded-full w-fit">
-    <CalendarIcon class="w-6 h-6"/>
-    <p class="font-cairo font-semibold text-base">Ajouter à mon agenda</p>
-  </button>
+<div class="m-auto">
+  <button class="glow-on-hover-dark font-210-d text-xl" type="button">{{text}}</button>
+</div>
 </template>
 
 <script>
-import { CalendarIcon } from '@heroicons/vue/outline'
-
 export default {
-  components: { CalendarIcon},
+  props:{
+
+    text: {
+      type: String,
+      default: 'Bouton',
+      },
+  }
 }
 </script>
 
 <style>
-.glow {
+.glow-on-hover-dark {
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
     padding-bottom: 1%;
     border: none;
     outline: none;
-    color: #1F1F1F;
-    background: white;
+    color: white;
+    background: #1F1F1F;
     cursor: pointer;
     position: relative;
+    transform: skew(-21deg);
     z-index: 0;
     border-radius: 10px;
 }
 
-.glow:before {
+.glow-on-hover-dark:before {
     content: '';
     background: linear-gradient(45deg, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 1));
     position: absolute;
@@ -46,25 +50,25 @@ export default {
     border-radius: 10px;
 }
 
-.glow:active {
-    color: white
+.glow-on-hover-dark:active {
+    color: #1F1F1F
 }
 
-.glow:active:after {
+.glow-on-hover-dark:active:after {
     background: transparent;
 }
 
-.glow:hover:before {
+.glow-on-hover-dark:hover:before {
     opacity: 1;
 }
 
-.glow:after {
+.glow-on-hover-dark:after {
     z-index: -1;
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: white;
+    background: #1F1F1F;
     left: 0;
     top: 0;
     border-radius: 10px;

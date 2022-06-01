@@ -1,20 +1,23 @@
 <template>
-  <button class="flex glow align-middle gap-5 bg-sombre border-2 border-accent px-9 py-2 rounded-full w-fit">
-    <CalendarIcon class="w-6 h-6"/>
-    <p class="font-cairo font-semibold text-base">Ajouter à mon agenda</p>
-  </button>
+<div class="m-auto">
+  <button class="glow-on-hover font-210-d text-xl" type="button">{{text}}</button>
+</div>
 </template>
 
 <script>
-import { CalendarIcon } from '@heroicons/vue/outline'
-
 export default {
-  components: { CalendarIcon},
+  props:{
+
+    text: {
+      type: String,
+      default: 'Bouton',
+      },
+  }
 }
 </script>
 
 <style>
-.glow {
+.glow-on-hover {
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
@@ -25,11 +28,12 @@ export default {
     background: white;
     cursor: pointer;
     position: relative;
+    transform: skew(-21deg);
     z-index: 0;
     border-radius: 10px;
 }
 
-.glow:before {
+.glow-on-hover:before {
     content: '';
     background: linear-gradient(45deg, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 1));
     position: absolute;
@@ -46,19 +50,19 @@ export default {
     border-radius: 10px;
 }
 
-.glow:active {
+.glow-on-hover:active {
     color: white
 }
 
-.glow:active:after {
+.glow-on-hover:active:after {
     background: transparent;
 }
 
-.glow:hover:before {
+.glow-on-hover:hover:before {
     opacity: 1;
 }
 
-.glow:after {
+.glow-on-hover:after {
     z-index: -1;
     content: '';
     position: absolute;

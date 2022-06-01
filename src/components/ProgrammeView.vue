@@ -146,15 +146,21 @@
         </div>
       </div>
     </div>
+    <div class="m-auto my-[5%]">
+      <router-link to="/concert">
+        <glow :text="'DECOUVRIR'"/>
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script>
 import images from "../components/ImageView.vue"
+import glow from "./bouttons/ButtonWhite.vue"
 
 export default {
 
-  components: { images },
+  components: { images, glow },
 
   props:{
 

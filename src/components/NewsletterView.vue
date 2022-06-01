@@ -56,7 +56,7 @@
           <label class="font-semibold font-cairo text-sm text-center text-sombre" for="RGPD">J’accepte de partager mes données avec l’administrateur du site web pour qu’il puisse m’envoyer les dernières nouveautées par mail</label>
         </div>
         <div class="flex justify-center align-middle mt-6">
-          <button class="font-cairo text-sombre font-semibold text-sm text-center border-b-2 border-accent" type="submit">JE M'ABONNE</button>
+          <button class="font-cairo text-sombre font-semibold text-sm text-center border-b-2 border-accent hover:text-accent" type="submit">JE M'ABONNE</button>
         </div>
       </form>
     </div>

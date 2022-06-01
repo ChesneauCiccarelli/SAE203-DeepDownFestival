@@ -51,13 +51,13 @@
       <animation/>
     </section>
 
-    <div class="fondronds my-[5%]">
+    <div class="fondronds my-[5%] py-5">
       <p class="font-210 text-5xl text-center">TR<strong class="text-accent neon fade">O</strong>IS</p>
       <p class="font-210 text-5xl text-center">J<strong class="text-accent neon fade">O</strong>URS</p>
       <p class="font-210 text-5xl text-center">P<strong class="text-accent neon fade">O</strong>UR</p>
-      <p class="font-210 text-5xl text-center">V<strong class="text-accent neon fade">O</strong>US</p>
-      <router-link to="/programmation">
-        <bouton class="mx-auto" :text1="'JE VEUX'" :text2="'MA PLACE'"/>
+      <p class="font-210 text-5xl text-center mb-3">V<strong class="text-accent neon fade">O</strong>US</p>
+      <router-link to="/programmation" class="text-center">
+        <glow2 :text="'JE VEUX MA PLACE'"/>
       </router-link>
     </div>
 
@@ -87,23 +87,9 @@
     <section>
       <div class="bg-white mt-[5%] p-5 rounded-3xl">
         <h1 class="text-center font-210 font-black text-sombre mb-3">Pour toute autre question</h1>
-          <div class="w-[300px] h-[70px] mx-auto relative">
-            <svg
-              viewBox="0 0 299 70"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="mx-auto"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M52.5043 3.00873L3.61412 53.0087C-2.57667 59.3401 1.90907 70 10.7641 70H239.346C242.037 70 244.614 68.9154 246.496 66.9913L295.386 16.9913C301.577 10.6599 297.091 0 288.236 0H59.6543C56.9632 0 54.3857 1.08462 52.5043 3.00873Z"
-                fill="#1D1D1B"
-              ></path>
-            </svg>
-            <router-link to="/contact">
-              <p class="w-[310px] absolute top-[7.8px] text-xl font-210-d text-center text-white">CONTACTEZ<br/>NOUS</p>
-            </router-link>
-          </div>
+          <router-link to="/contact" class="text-center">
+            <glow :text="'CONTACTEZ - NOUS'"/>
+          </router-link>
       </div>
     </section>
 
@@ -115,14 +101,15 @@
 <script>
 import carrousel from "../components/CarrouselView.vue"
 import images from "../components/ImageView.vue"
-import bouton from "../components/bouttons/BouttonView.vue"
+import glow from "../components/bouttons/ButtonDarkView.vue"
+import glow2 from "../components/bouttons/ButtonWhite.vue"
 import composant from "../components/bouttons/ComposantView.vue"
 import newsletter from "../components/NewsletterView.vue"
 import DDbas from "../../src/components/FooterView.vue"
 import animation from "../../src/components/decors/AnimationView.vue"
 
 export default {
-  components: { carrousel, images, bouton, composant, newsletter, DDbas, animation },
+  components: { carrousel, images, glow, glow2, composant, newsletter, DDbas, animation },
 };
 </script>
 
