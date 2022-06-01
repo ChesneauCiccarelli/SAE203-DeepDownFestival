@@ -164,7 +164,7 @@ div#slider figure img { width: 20%; height: auto; float: left; }
   100% { left: -400%; }
 }
 .fade{
-  animation: fade 6s ease 0s infinite normal forwards;
+  animation: fade 6s linear 0s infinite normal forwards;
 }
 @keyframes fade {
 	0%,
