@@ -1,5 +1,5 @@
 <template>
-<div class="md:pt-[90px]">
+<div class="md:pt-[90px]" id="top">
   <div class="contacttop">
     <heading :titre="'PAGE DE CONTACT'" :text="'Pour nous contacter, remplisser le formulaire ci-dessous.'"/>
   </div>
@@ -85,7 +85,7 @@ export default {
             const db = getFirestore();
             const docRef = addDoc(collection(db, 'formulaire'), this.formulaire );
             alert('Votre message a bien été envoyé');
-            this.$router.push('/contact');   
+            this.$router.push('#top');   
        },
 
   }
