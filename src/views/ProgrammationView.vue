@@ -50,7 +50,7 @@ export default {
 
 <style>
 .programmtop{
-  background-image: url("../../public/fonds/programmation.png");
+  background-image: url("../../fonds/programmation.png");
   background-position: center;
 }
 </style>

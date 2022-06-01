@@ -66,18 +66,7 @@ export default {
 
 <style>
 .festtop{
-  background-image: url("../../public/fonds/festival.png");
+  background-image: url("../../fonds/festival.png");
   background-position: center;
-}
-
-.neon{
-  text-shadow: 0 0 20px #FF0000, 0 0 30px #FF0000, 0 0 40px #FF0000, 0px 0px 5px #FF0000;
-}
-
-.fondronds{
-  background-image: url("../../public/fonds/pattern.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 </style>

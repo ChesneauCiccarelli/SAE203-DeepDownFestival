@@ -207,7 +207,7 @@ export default {
 
 <style>
 .concerttop{
-  background-image: url("../../public/fonds/concert.png");
+  background-image: url("../../fonds/concert.png");
   background-position: center;
 }
 .neon{

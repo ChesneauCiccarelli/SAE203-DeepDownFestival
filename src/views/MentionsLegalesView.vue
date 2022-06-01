@@ -56,7 +56,7 @@ export default {
 
 <style>
 .mltop{
-  background-image: url("../../public/fonds/mentionslegales.png");
+  background-image: url("../../fonds/mentionslegales.png");
   background-position: center;
 }
 </style>

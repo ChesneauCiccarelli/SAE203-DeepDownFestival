@@ -209,7 +209,7 @@ export default {
 
 <style>
 .personnetop{
-  background-image: url("../../public/fonds/alanwalker.png");
+  background-image: url("../../fonds/alanwalker.png");
   background-position: center;
 }
 .neon{

@@ -99,7 +99,7 @@ export default {
 
 <style>
 .contacttop{
-  background-image: url("../../public/fonds/contact.jpg");
+  background-image: url("../../fonds/contact.jpg");
   background-position: center;
 }
 .button{

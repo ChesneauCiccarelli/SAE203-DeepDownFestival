@@ -140,7 +140,7 @@ export default {
 
 <style>
 .artisttop{
-  background-image: url("../../public/fonds/artistes.png");
+  background-image: url("../../fonds/artistes.png");
   background-position: center;
 }
 </style>
