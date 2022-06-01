@@ -1,6 +1,6 @@
 <template>
 <div class="m-auto">
-  <button class="glow-on-hover font-210-d text-xl" type="button">{{text}}</button>
+  <button class="glow-white font-210-d text-xl" type="button">{{text}}</button>
 </div>
 </template>
 
@@ -12,12 +12,14 @@ export default {
       type: String,
       default: 'Bouton',
       },
+
   }
+  
 }
 </script>
 
 <style>
-.glow-on-hover {
+.glow-white {
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
@@ -33,7 +35,7 @@ export default {
     border-radius: 10px;
 }
 
-.glow-on-hover:before {
+.glow-white:before {
     content: '';
     background: linear-gradient(45deg, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 1));
     position: absolute;
@@ -50,19 +52,19 @@ export default {
     border-radius: 10px;
 }
 
-.glow-on-hover:active {
+.glow-white:active {
     color: white
 }
 
-.glow-on-hover:active:after {
+.glow-white:active:after {
     background: transparent;
 }
 
-.glow-on-hover:hover:before {
+.glow-white:hover:before {
     opacity: 1;
 }
 
-.glow-on-hover:after {
+.glow-white:after {
     z-index: -1;
     content: '';
     position: absolute;
