@@ -1,6 +1,3 @@
-
-// Mon site ne présente peu d'attributs variants dark:, il est litérallement noir et blanc. Pour réaliser l'exercice tout de même, le footer et le header sont disponible en dark mode //
-
 module.exports = {
   content: [
     "./index.html",

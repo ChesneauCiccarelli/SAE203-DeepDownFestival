@@ -137,9 +137,9 @@
     <h2 class="font-210 text-xl mt-[5%]">Composants</h2>
       <agenda class="my-5 m-auto"/>
       <hr>
-      <boutonsimple class="my-5 m-auto"/>
+      <boutonsimple class="my-5 m-auto text-center"/>
       <hr>
-      <boutondouble class="my-5 m-auto"/>
+      <boutondouble class="my-5 m-auto text-center"/>
       <hr>
       <module class="my-5"/>
       <hr>
