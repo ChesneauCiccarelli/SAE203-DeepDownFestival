@@ -34,7 +34,7 @@
 
         <div class="mt-5 mx-5 text-center">
           <div>
-            <button type="submit" class="button font-210-d text-xl bg-white text-sombre px-8 py-4 rounded-full" @click="resetInput">ENVOYER</button>
+            <button type="submit" class="button font-210-d text-lg bg-white text-sombre px-4 py-2 rounded-full" @click="resetInput">ENVOYER</button>
           </div>
         </div>
       </form>
@@ -85,6 +85,10 @@ export default {
             const db = getFirestore();
             const docRef = addDoc(collection(db, 'formulaire'), this.formulaire );
             alert('Votre message a bien été envoyé');
+            this.formulaire.nom = "";
+            this.formulaire.prenom = "";
+            this.formulaire.email = "";
+            this.formulaire.message = "";
             this.$router.push('#top');   
        },
 
