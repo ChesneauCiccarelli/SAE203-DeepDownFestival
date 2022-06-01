@@ -116,6 +116,7 @@ export default {
         return {
             listeTitres:[],
             listeAlbums:[],
+            query:''
         }
 
     },
@@ -131,14 +132,14 @@ export default {
             let query = this.query;
             return this.listeTitres.filter(function(titres){
                 return titres.nom.includes(query);
-            })                
+            })
         },
 
         searchByNameAlbums() {
             let query = this.query;
             return this.listeAlbums.filter(function(albums){
                 return albums.nom.includes(query);
-            })                
+            })
         },
 
   },
