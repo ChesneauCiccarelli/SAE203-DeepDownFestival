@@ -26,3 +26,10 @@ a:hover{
 .shadow{
   text-shadow: 3px 3px 2px black, 2px 2px 5px red;
 }
+
+.fondronds{
+  background-image: url("../../public/fonds/pattern.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

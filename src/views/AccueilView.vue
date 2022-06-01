@@ -9,16 +9,17 @@
       </div>
     </div>
 
+    <div class="fondronds mt-[5%] p-[5%] pt-[7%] rounded-3xl">
+      <h1 class="neon font-210 text-3xl text-center mb-5">LE FESTIVAL DE L'HISTOIRE DE LA MUSIQUE ELECTRONIQUE</h1>
+      <p class="font-cairo font-semibold text-xl text-center ">Plonger avec nous les <strong>27, 28 et 29 mai 2022</strong>. Bordeaux se transforme en sanctuaire de la musique éléctronique.</p>
+      <div class="flex justify-center items-center gap-5">
+        <p class="font-210-box italic text-xl text-center">VENEZ NOMBREUX</p>
+        <img src="../../public/icons/svg/Headphones.svg" alt="Icônes de casque audio">
+      </div>
+    </div>
+
     <section>
       <div>
-        <div class="fondronds mt-[5%] p-[5%] pt-[7%] rounded-3xl">
-          <h1 class="neon font-210 text-3xl text-center mb-5">LE FESTIVAL DE L'HISTOIRE DE LA MUSIQUE ELECTRONIQUE</h1>
-          <p class="font-cairo font-semibold text-xl text-center ">Plonger avec nous les <strong>27, 28 et 29 mai 2022</strong>. Bordeaux se transforme en sanctuaire de la musique éléctronique.</p>
-          <div class="flex justify-center items-center gap-5">
-            <p class="font-210-box italic text-xl text-center">VENEZ NOMBREUX</p>
-            <img src="../../public/icons/svg/Headphones.svg" alt="Icônes de casque audio">
-          </div>
-        </div>
         <div>
           <images class="mt-[5%]"/>
           <carrousel class="mt-[5%]"/>

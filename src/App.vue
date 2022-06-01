@@ -33,13 +33,13 @@
       </transition>
     </Menu>
 
-    <nav class="hidden fixed z-40 w-full md:flex bg-white dark:bg-sombre dark:border-x dark:border-b p-5 rounded-br-3xl rounded-bl-3xl">
+    <nav class="hidden fixed z-40 w-full md:flex md:justify-center bg-white dark:bg-sombre dark:border-x dark:border-b p-5 rounded-br-3xl rounded-bl-3xl">
         <div class="mr-[2%]">
           <router-link to="/">
-            <img class="flex-auto h-[50px] w-[50px]" src="../public/icons/LogoDDBlanc.jpg" alt="Logo du festival Deep Down" >
+            <img class="h-[50px] w-[50px]" src="../public/icons/LogoDDBlanc.jpg" alt="Logo du festival Deep Down" >
           </router-link>
         </div>
-        <div class="flex gap-8 flex-auto items-center justify-center">
+        <div class="flex gap-8 items-center justify-center">
           <router-link to="/festival">
             <p class="font-210-box italic text-3xl text-sombre dark:text-white">LE FESTIVAL</p>
           </router-link>
