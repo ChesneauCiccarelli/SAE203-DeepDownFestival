@@ -28,7 +28,7 @@
     <section>
         <div class="mt-[5%] grid grid-cols-[repeat(auto-fit,300px)] gap-5 justify-center align-middle">
             <div v-for="art in searchByName" :key="art.id" class="boerder-2 border-accent">
-                <router-link to="/personne">
+                <router-link to="/alan-walker">
                     <div>
                         <img :src="art.photo" :alt="art.prenom+' '+art.nom">   
                         <p class="w-[300px] shadow font-210-box font-black italic text-center text-3xl my-3 text-white">{{art.nom}}</p>
