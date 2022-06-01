@@ -14,11 +14,12 @@ Pour l'exercice sur le dark mode et étant donné que mon site est plûtot sombr
 
 Exercices réalisés
 
-- Liste syncronisée des artistes (/artistes)
+- Liste synchronisée des artistes (/artistes)
+- Appel d'une liste de titres musicaux et d'albums (/alan-walker)
 - Champ de recherche dans la page artiste (/artistes)
 - Création d'un artiste (/CreateArtistes)
 - Modification d'un artiste (/UpdateArtistes)
 - Suppression d'un artiste (/DeleteArtistes)
-- Liste syncronisée des pays et ajout - modification - suppression de pays (/CreateArtistes, /UpdateArtistes)
+- Liste synchronisée des pays et ajout - modification - suppression de pays (/CreateArtistes, /UpdateArtistes)
 - Envoie de données basiques par un formulaire (/contact)
-- Donner son adresse mail pour s'inscrire à une newsletter (/ , /contact)
+- Partager son adresse mail pour s'inscrire à une newsletter (/ , /contact) - NewsletterView.vue

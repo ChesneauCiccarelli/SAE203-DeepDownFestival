@@ -52,7 +52,7 @@
         </defs>
         </svg>
         <div class="text-center flex gap-5 justify-center align-middle mt-5">
-          <input type="checkbox" required>
+          <input type="checkbox" class="my-auto" required>
           <label class="font-semibold font-cairo text-sm text-center text-sombre" for="RGPD">J’accepte de partager mes données avec l’administrateur du site web pour qu’il puisse m’envoyer les dernières nouveautées par mail</label>
         </div>
         <div class="flex justify-center align-middle mt-6">
@@ -99,5 +99,7 @@ export default {
 </script>
 
 <style>
-
+input[type=checkbox] {
+    transform: scale(1.5);
+}
 </style>
