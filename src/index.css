@@ -28,7 +28,7 @@ a:hover{
 }
 
 .fondronds{
-  background-image: url("../public/fonds/pattern.png");
+  background-image: url("../fonds/pattern.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

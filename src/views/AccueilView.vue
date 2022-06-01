@@ -115,7 +115,6 @@ export default {
 
 <style>
 .hometop{
-  -webkit-background-image: url("../../fonds/accueuil.png");
   background-image: url("../../fonds/accueuil.png");
   background-position: center;
 }
