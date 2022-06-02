@@ -11,7 +11,7 @@
           </div>
           <MenuButton onclick="document.body.style.overflow = document.body.style.overflow == 'hidden' ? 'auto' : 'hidden'">
             <div>
-              <button class="menu flex items-center justify-center h-[50px] w-[50px]" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')), document.body.style.overflow = document.body.style.overflow == 'hidden' ? 'auto' : 'hidden'" aria-label="Main Menu">
+              <button id="anim" class="menu flex items-center justify-center h-[50px] w-[50px]" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')), document.body.style.overflow = document.body.style.overflow == 'hidden' ? 'auto' : 'hidden'" aria-label="Main Menu">
                 <svg width="100" height="100" viewBox="0 0 100 100">
                   <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
                   <path class="line line2" d="M 20,50 H 80" />
@@ -22,7 +22,7 @@
             <span class="sr-only">Menu</span> 
           </MenuButton>
         </div>
-        <div onclick="this.classList.toggle('opened')">
+        <div onclick="anim.classList.remove('opened')">
           <transition class="md:hidden h-screen overflow-y-hidden"
             enter-active-class="transition duration-1000 ease-out"
             enter-from-class="transform -translate-x-full"
