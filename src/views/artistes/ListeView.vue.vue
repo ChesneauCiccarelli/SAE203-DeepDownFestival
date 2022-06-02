@@ -1,5 +1,5 @@
 <template>
-  <div class="md:pt-[90px]">
+  <div class="md:pt-[90px] pt-28">
 
   <div class="artisttop">
     <heading :titre="'ARTISTES'" :text="'Vos artistes favoris montent sur la grande scène pour vous.'"/>
@@ -17,7 +17,7 @@
         </div>
         <underline/>
         <div>
-            <router-link to="/CreateArtistes" class="flex gap-3 bg-accent text-white py-2 px-3 rounded-full justify-center mt-[5%] md:mt-0">
+            <router-link to="/creer-un-artiste" class="flex gap-3 bg-accent text-white py-2 px-3 rounded-full justify-center mt-[5%] md:mt-0">
                 <p class="font-210 font-semibold text-base">AJOUTER</p>
                 <PlusIcon class="w-6 h-6"/>
             </router-link>

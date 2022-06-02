@@ -1,5 +1,5 @@
 <template>
-  <div class="md:pt-[90px]">
+  <div class="md:pt-[90px] pt-5">
     <div class="concerttop md:flex md:max-h-[830px]">
       <div class="m-auto">
         <img class="m-auto max-h-[500px] md:flex-auto" src="../../public/logosx3.jpg" alt="Illustration Deep Down">

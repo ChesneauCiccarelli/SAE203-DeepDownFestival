@@ -1,5 +1,5 @@
 <template>
-  <div class="md:pt-[90px]">
+  <div class="md:pt-[90px] pt-28">
     <div class="personnetop md:flex">
       <div class="m-auto">
         <img src="../../../public/logosx3.jpg" alt="Illustration Deep Down">

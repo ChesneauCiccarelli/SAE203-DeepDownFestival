@@ -1,5 +1,5 @@
 <template>
-  <div class="md:pt-[90px]">
+  <div class="md:pt-[90px] pt-5">
     <div class="hometop md:flex md:max-h-[830px]">
       <div class=" md:w-[50%] py-20">
         <img class="m-auto md:flex-auto" src="../../public/icons/svg/hometop.svg" alt="Illustration">

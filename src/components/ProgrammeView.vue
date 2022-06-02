@@ -147,7 +147,7 @@
       </div>
     </div>
     <div class="m-auto my-[5%]">
-      <router-link to="/concert">
+      <router-link to="/jour-1">
         <glow :text="'DECOUVRIR'"/>
       </router-link>
     </div>

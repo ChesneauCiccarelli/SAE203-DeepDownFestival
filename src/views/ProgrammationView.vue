@@ -1,5 +1,5 @@
 <template>
-<div class="md:pt-[90px]">
+<div class="md:pt-[90px] pt-5">
   <div class="programmtop">
     <heading :titre="'PROGRAMMATION'" :text="'Les trois jours les plus remplis de votre année.'"/>
   </div>

@@ -20,17 +20,17 @@ import Guidedestyle from "../views/GuidedestyleView.vue"
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/', name: 'Accueil', component: AccueilView },
-    { path: '/concert', name: 'Concert', component: ConcertView },
+    { path: '/', name: 'Accueil', component: AccueilView,},
+    { path: '/jour-1', name: 'Concert', component: ConcertView },
     { path: '/contact', name: 'Contact', component: ContactView },
     { path: '/festival', name: 'Festival', component: FestivalView },
-    { path: '/ml', name: 'MentionLegales', component: MentionsLegalesView },
+    { path: '/mentions-legales', name: 'MentionLegales', component: MentionsLegalesView },
     { path: '/programmation', name: 'Programmation', component: ProgrammationView },
 
     { path: '/artistes', name: 'ListeArtistes', component: ListeArtistes },
-    { path: '/CreateArtistes', name: 'CreateArtistes', component: CreateArtistes },
-    { path: '/UpdateArtistes', name: 'UpdateArtistes', component: UpdateArtistes },
-    { path: '/DeleteArtistes', name: 'DeleteArtistes', component: DeleteArtistes },
+    { path: '/creer-un-artiste', name: 'CreateArtistes', component: CreateArtistes,},
+    { path: '/modifier-un-artiste', name: 'UpdateArtistes', component: UpdateArtistes },
+    { path: '/supprimer-un-artiste', name: 'DeleteArtistes', component: DeleteArtistes },
 
     { path: '/alan-walker', name: 'ListeAlan', component: ListeAlan },
 

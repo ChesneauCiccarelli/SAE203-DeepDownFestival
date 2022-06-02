@@ -51,7 +51,7 @@
         </svg>
       </div>
       <div class="flex flex-col justify-center items-center flex-grow relative">
-          <router-link to="/ml">
+          <router-link to="/mentions-legales">
             <p class="font-cairo text-xs font-semibold text-center text-sombre dark:text-white dark:border-b">MENTIONS LEGALES</p>
           </router-link>
         <svg
