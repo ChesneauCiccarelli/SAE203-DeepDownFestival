@@ -100,7 +100,7 @@ export default {
         searchByName() {
             let query = this.query;
             return this.listeArtistes.filter(function(art){
-                return art.nom.includes(query);
+                return art.nom.toLowerCase().includes(query.toLowerCase());
             })                
         },
 

@@ -38,7 +38,7 @@
                     <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
                         <span class="font-cairo font-black text-lg" >Image</span>
                     </div>
-                      <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" type="file" placeholder="Ajouter un fichier" ref="file" id="file" @change="previewImage">               
+                      <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg w-full" type="file" placeholder="Ajouter un fichier" ref="file" id="file" @change="previewImage">               
                   </div>
               </div>
               <div>
