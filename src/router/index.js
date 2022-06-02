@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
 import AccueilView from '../views/AccueilView.vue'
 import ConcertView from '../views/ConcertView.vue'
 import ContactView from '../views/ContactView.vue'
@@ -7,7 +8,7 @@ import MentionsLegalesView from '../views/MentionsLegalesView.vue'
 import ProgrammationView from '../views/ProgrammationView.vue'
 
 import ListeArtistes from '../views/artistes/ListeView.vue.vue'
-import CreateArtistes     from      '../views/artistes/CreateView.vue'
+import CreateArtistes     from '../views/artistes/CreateView.vue'
 import UpdateArtistes    from      '../views/artistes/UpdateView.vue'
 import DeleteArtistes    from      '../views/artistes/DeleteView.vue'
 
@@ -27,7 +28,7 @@ const router = createRouter({
     { path: '/mentions-legales', name: 'MentionLegales', component: MentionsLegalesView },
     { path: '/programmation', name: 'Programmation', component: ProgrammationView },
 
-    { path: '/artistes', name: 'ListeArtistes', component: ListeArtistes },
+    { path: '/artistes', name: 'ListeArtistes', component: ListeArtistes, },
     { path: '/creer-un-artiste', name: 'CreateArtistes', component: CreateArtistes,},
     { path: '/modifier-un-artiste', name: 'UpdateArtistes', component: UpdateArtistes },
     { path: '/supprimer-un-artiste', name: 'DeleteArtistes', component: DeleteArtistes },

@@ -30,7 +30,7 @@
                         <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
                             <span class="font-cairo font-black text-lg" >Nom</span>
                         </div>
-                        <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" placeholder="Complétez avec un nom" v-model="artistes.nom" required />                    
+                        <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg font-cairo font-semibold text-base" placeholder="Complétez avec un nom" v-model="artistes.nom" required />                    
                     </div>
                 </div>
                 <div>
@@ -38,7 +38,7 @@
                         <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
                             <span class="font-cairo font-black text-lg" >Image</span>
                         </div>
-                        <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg w-full" type="file" placeholder="Ajouter un fichier" ref="file" id="file" @change="previewImage">               
+                        <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg w-full font-cairo font-semibold text-base" type="file" placeholder="Ajouter un fichier" ref="file" id="file" @change="previewImage">               
                     </div>
                 </div>
                 <div>
@@ -46,7 +46,7 @@
                         <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
                             <span class="font-cairo font-black text-lg" >Date de naissance</span>
                         </div>
-                        <input type="date" class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" v-model="artistes.naissance" format="dd/mm/yyyy" required />                    
+                        <input type="date" class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg font-cairo font-semibold text-base" v-model="artistes.naissance" format="dd/mm/yyyy" required />                    
                     </div>
                 </div>
                 <div>
@@ -54,7 +54,7 @@
                         <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
                             <span class="font-cairo font-black text-lg" >Pays</span>
                         </div>
-                        <select class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" v-model="artistes.nationalite">
+                        <select class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg font-cairo font-semibold text-base" v-model="artistes.nationalite">
                         <option selected disabled>Sélectionner un Pays</option>
                         <option v-for="pays in listePays" :key="pays.nom">{{pays.nom}}</option>
                         </select>                    
@@ -79,7 +79,7 @@
                 <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
                     <span class="font-cairo font-black text-lg" >Nouveau Pays</span>
                 </div>
-                <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" placeholder="Complétez avec un nom" v-model='nom' required>  
+                <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg font-cairo font-semibold text-base" placeholder="Complétez avec un nom" v-model='nom' required>  
                 <button type="button" @click='createPays()' title="Création">
                     <SaveIcon class="w-6 h-6"/>
                 </button>                  

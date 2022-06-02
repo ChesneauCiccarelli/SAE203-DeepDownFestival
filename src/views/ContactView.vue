@@ -9,25 +9,25 @@
       <form @submit.prevent="submitFormulaire">
         <div>
           <div class="mt-5 mx-5">
-            <input class="w-full bg-sombre text-accent" type="text" placeholder="Nom" v-model="formulaire.nom" required>
+            <input class="w-full bg-sombre text-white font-cairo font-semibold text-base" type="text" placeholder="Nom" v-model="formulaire.nom" required>
           </div>
           <underline/>
           <div class="mt-5 mx-5">
-            <input class="w-full bg-sombre text-accent" type="text" placeholder="Prénom" v-model="formulaire.prenom">
-          </div>
-          <underline/>
-        </div>
-
-        <div>
-          <div class="mt-5 mx-5">
-            <input class="w-full bg-sombre text-accent" type="email" placeholder="Email" v-model="formulaire.email" required>
+            <input class="w-full bg-sombre text-white font-cairo font-semibold text-base" type="text" placeholder="Prénom" v-model="formulaire.prenom">
           </div>
           <underline/>
         </div>
 
         <div>
           <div class="mt-5 mx-5">
-            <textarea class="w-full bg-sombre text-accent" placeholder="Message" name="message" rows="3" v-model="formulaire.message" required></textarea>
+            <input class="w-full bg-sombre text-white font-cairo font-semibold text-base" type="email" placeholder="Email" v-model="formulaire.email" required>
+          </div>
+          <underline/>
+        </div>
+
+        <div>
+          <div class="mt-5 mx-5">
+            <textarea class="w-full bg-sombre text-white font-cairo font-semibold text-base" placeholder="Message" name="message" rows="3" v-model="formulaire.message" required></textarea>
           </div>
           <underline/>
         </div>

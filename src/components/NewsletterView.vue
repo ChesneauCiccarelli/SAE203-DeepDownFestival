@@ -9,7 +9,7 @@
       <form class="self-stretch flex-grow-0 flex-shrink-0" @submit.prevent="newabonneNewsletter">
         <div>
           <label class="font-black font-210 text-left text-sombre" for="email">Email</label>
-          <input class="w-full border-2 border-accent rounded-xl text-sombre pl-3" type="email" name="email" v-model="abonnesnewsletter.mail" required/>
+          <input class="w-full border-2 border-accent rounded-xl text-sombre pl-3 font-cairo font-semibold text-base" type="email" name="email" v-model="abonnesnewsletter.mail" required/>
         </div>
         <svg
           viewBox="0 0 315 13"

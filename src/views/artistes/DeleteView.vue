@@ -30,7 +30,7 @@
                     <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
                         <span class="font-cairo font-black text-lg" >Nom</span>
                     </div>
-                      <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" placeholder="Complétez avec un nom" v-model="artistes.nom" disabled />                    
+                      <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg font-cairo font-semibold text-base" placeholder="Complétez avec un nom" v-model="artistes.nom" disabled />                    
                 </div>
               </div>
               <div>
@@ -38,7 +38,7 @@
                     <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
                         <span class="font-cairo font-black text-lg" >Date de naissance</span>
                     </div>
-                    <input type="date" class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" v-model="artistes.naissance" format="dd/mm/yyyy" disabled />                    
+                    <input type="date" class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg font-cairo font-semibold text-base" v-model="artistes.naissance" format="dd/mm/yyyy" disabled />                    
                 </div>
               </div>
               <div>
@@ -46,7 +46,7 @@
                     <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
                         <span class="font-cairo font-black text-lg" >Pays</span>
                     </div>
-                    <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" v-model="artistes.nationalite" disabled/>
+                    <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg font-cairo font-semibold text-base" v-model="artistes.nationalite" disabled/>
                 </div>
               </div>
               <h2 class="bg-sombre text-center font-cairo font-semibold text-2xl" role="alert"> <strong class="neon">Attention</strong> supprimer un artiste est irréversible.</h2>
