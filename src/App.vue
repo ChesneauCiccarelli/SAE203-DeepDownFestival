@@ -27,7 +27,7 @@
             enter-active-class="transition duration-1000 ease-out"
             enter-from-class="transform -translate-x-full"
             enter-to-class="transform translate-x-0"
-            leave-active-class="transition duration-200 ease-in"
+            leave-active-class="transition duration-400 ease-in"
             leave-from-class="transform translate-0"
             leave-to-class="transform -translate-x-full"
           >

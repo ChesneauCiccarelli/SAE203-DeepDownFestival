@@ -65,7 +65,17 @@
       <animation/>
     </section>
 
-    <h1 class="font-210 text-3xl text-center mt-[5%]">Les titres phares</h1>
+    <section>
+      <h1 class="font-210-box italic neon text-4xl text-center mt-[5%]">Les titres et albums phares</h1>
+      <div class="my-5">
+        <div class="flex-auto flex items-center">
+          <SearchIcon class="w-6 h-6"/>
+          <input class="bg-sombre font-cairo font-semibold text-xl text-accent flex-auto" type="text" v-model="query" placeholder="Rechercher"/> 
+        </div>
+        <underline/>
+      </div>
+      <h2 class="font-210 text-3xl text-center mt-[5%]">Titres</h2>
+    </section>
     <div class="grid grid-cols-[repeat(auto-fit,200px)] gap-5 justify-center mt-5">
       <div v-for="titres in searchByName" :key="titres.id">
         <div class="w-[200px]">
@@ -77,7 +87,9 @@
       </div>
     </div>
 
-    <h1 class="font-210 text-3xl text-center mt-[5%]">Albums</h1>
+    <section>
+      <h2 class="font-210 text-3xl text-center mt-[5%]">Albums</h2>
+    </section>
     <div class="grid grid-cols-[repeat(auto-fit,200px)] gap-5 justify-center mt-5">
       <div v-for="albums in searchByNameAlbums" :key="albums.id">
         <div class="w-[200px]">
@@ -88,6 +100,7 @@
         </div>
       </div>
     </div>
+    
 
     <section class="mt-[5%] fondronds p-5 m-auto">
       <p class="font-cairo text-xl font-semibold text-center mb-3">Retrouvez-le le <strong>27, 28 et 29 mai 2022</strong> sur la grande scène du <strong>DEEP DOWN Festival</strong>.</p>
@@ -105,11 +118,13 @@
 import DDbas from "../../components/FooterView.vue"
 import bouton from "../../components/bouttons/ButtonWhite.vue"
 import animation from "../../components/decors/AnimationView.vue"
+import underline from "../../components/decors/UnderlineView.vue"
+import { SearchIcon } from "@heroicons/vue/outline"
 import { getFirestore, collection, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
 import { getStorage, ref, getDownloadURL } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
 
 export default {
-  components: { DDbas, bouton, animation },
+  components: { DDbas, bouton, animation, underline, SearchIcon },
 
   data() {
 
@@ -130,15 +145,16 @@ export default {
 
         searchByName() {
             let query = this.query;
-            return this.listeTitres.filter(function(titres){
-                return titres.nom.includes(query);
+            return this.listeTitres.filter(function(art){
+                return art.nom.toLowerCase().replace(/\s/g, '').includes(query.toLowerCase().replace(/\s/g, ''));
             })
+                          
         },
 
         searchByNameAlbums() {
             let query = this.query;
             return this.listeAlbums.filter(function(albums){
-                return albums.nom.includes(query);
+                return albums.nom.toLowerCase().replace(/\s/g, '').includes(query.toLowerCase().replace(/\s/g, ''));
             })
         },
 

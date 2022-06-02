@@ -85,26 +85,28 @@
               </button>                  
         </div>
         <div class="mt-[5%] overflow-x-auto">
-          <table class="w-fit m-auto">
+          <table class="w-full m-auto">
             <thead>
                 <tr>
-                  <th scope="col" class="w-[20%] font-210 text-2xl">Id <underline/></th>
-                  <th scope="col" class="w-[20%] font-210 text-2xl">Nom <underline/></th>
-                  <th scope="col" class="w-[20%] font-210 text-2xl">Actions <underline/></th>
+                  <th scope="col" class="w-1/3 font-210 text-2xl">Id <underline/></th>
+                  <th scope="col" class="w-1/3 font-210 text-2xl">Nom <underline/></th>
+                  <th scope="col" class="w-1/3 font-210 text-2xl">Actions <underline/></th>
                 </tr>
             </thead>
             <tbody>
               <tr v-for='pays in listePays' :key='pays.id'>
                 <td class="bg-sombre text-white font-cairo font-semibold text-xl text-center">{{pays.id}}</td>
                 <td>
-                  <input class="w-full bg-sombre text-white font-cairo font-semibold text-xl text-center" type='text' v-model='pays.nom' />
+                  <input class="bg-sombre text-white font-cairo font-semibold text-xl text-center w-fit md:w-full mx-auto" type='text' v-model='pays.nom' />
                 </td>
-                <td class="flex justify-evenly">
-                  <button class="font-cairo font-semibold text-xl text-center flex gap-2" @click.prevent="updatePays(pays)">Modifier
-                    <PencilAltIcon class="w-6 h-6"/>
+                <td class="flex justify-evenly gap-5">
+                  <button class="font-cairo font-semibold text-xl text-center flex gap-2" @click.prevent="updatePays(pays)">
+                    <p class="hidden md:block m-auto italic font-thin">Modifier</p>
+                    <PencilAltIcon class="w-10 h-10"/>
                   </button>
-                  <button class="font-cairo font-semibold text-xl text-center flex gap-2" @click.prevent="deletePays(pays)">Supprimer
-                    <XIcon class="w-6 h-6"/>
+                  <button class="font-cairo font-semibold text-xl text-center flex gap-2" @click.prevent="deletePays(pays)">
+                    <p class="hidden md:block m-auto italic text-accent font-thin">Supprimer</p>
+                    <XIcon class="w-10 h-10 text-accent"/>
                   </button>
                 </td>
               </tr>

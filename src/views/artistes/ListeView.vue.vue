@@ -13,9 +13,9 @@
     <div class="md:flex">
         <div class="flex-auto flex items-center">
             <SearchIcon class="w-6 h-6"/>
-            <input class="bg-sombre font-cairo font-semibold text-xl text-accent flex-auto" type="text" v-model="query" placeholder="Rechercher"/>  
+            <input class="bg-sombre font-cairo font-semibold text-xl text-accent flex-auto" type="text" v-model="query" placeholder="Rechercher"/> 
         </div>
-        <underline/>
+        <underline class="md:hidden"/>
         <div>
             <router-link to="/creer-un-artiste" class="flex gap-3 bg-accent text-white py-2 px-3 rounded-full justify-center mt-[5%] md:mt-0">
                 <p class="font-210 font-semibold text-base">AJOUTER</p>
@@ -23,6 +23,7 @@
             </router-link>
         </div>
     </div>
+    <underline class="hidden md:block"/>
   </section>
 
     <section>
@@ -47,13 +48,15 @@
                     </div>
                     <div class="flex justify-evenly my-2">
                         <div>
-                            <RouterLink :to="{ name:'DeleteArtistes', params: { id: art.id }}">
-                                <XIcon class="hover:text-accent w-10 h-10"/>
+                            <RouterLink :to="{ name:'UpdateArtistes', params: { id: art.id }}" class="font-cairo font-semibold text-xl text-center flex gap-2">
+                                <p class="hidden md:block m-auto italic font-thin">Modifier</p>
+                                <PencilAltIcon class="w-10 h-10"/>
                             </RouterLink>
                         </div>
                         <div>
-                            <RouterLink :to="{ name:'UpdateArtistes', params: { id: art.id }}">
-                                <PencilAltIcon class="hover:text-accent w-10 h-10"/>
+                            <RouterLink :to="{ name:'DeleteArtistes', params: { id: art.id }}" class="font-cairo font-semibold text-xl text-center flex gap-2">
+                                <p class="hidden md:block m-auto italic text-accent font-thin">Supprimer</p>
+                                <XIcon class="w-10 h-10 text-accent"/>
                             </RouterLink>
                         </div>
                     </div>
@@ -100,7 +103,7 @@ export default {
         searchByName() {
             let query = this.query;
             return this.listeArtistes.filter(function(art){
-                return art.nom.toLowerCase().includes(query.toLowerCase());
+                return art.nom.toLowerCase().replace(/\s/g, '').includes(query.toLowerCase().replace(/\s/g, ''));
             })                
         },
 

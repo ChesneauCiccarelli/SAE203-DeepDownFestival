@@ -38,7 +38,7 @@
                         <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
                             <span class="font-cairo font-black text-lg" >Image</span>
                         </div>
-                        <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" type="file" placeholder="Ajouter un fichier" ref="file" id="file" @change="previewImage">               
+                        <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg w-full" type="file" placeholder="Ajouter un fichier" ref="file" id="file" @change="previewImage">               
                     </div>
                 </div>
                 <div>
@@ -72,47 +72,49 @@
         </div>
     </section>
 
-  <section class="mt-[10%] md:mt-[5%]">
-    <h1 class="font-210-box italic text-5xl text-center mb-5">Modifier la liste deroulante des pays</h1>
-    <div>
-        <div class="flex items-center gap-2 mb-3">
-            <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
-                <span class="font-cairo font-black text-lg" >Nouveau Pays</span>
+    <section class="mt-[10%] md:mt-[5%]">
+        <h1 class="font-210-box italic text-5xl text-center mb-5">Modifier la liste deroulante des pays</h1>
+        <div>
+            <div class="flex items-center gap-2 mb-3">
+                <div class="bg-white text-sombre p-2 rounded-xl w-[200px] xl:w-[250px] text-center">
+                    <span class="font-cairo font-black text-lg" >Nouveau Pays</span>
+                </div>
+                <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" placeholder="Complétez avec un nom" v-model='nom' required>  
+                <button type="button" @click='createPays()' title="Création">
+                    <SaveIcon class="w-6 h-6"/>
+                </button>                  
             </div>
-              <input class="flex-auto bg-white text-sombre py-2 px-3 rounded-lg" placeholder="Complétez avec un nom" v-model='nom' required>  
-              <button type="button" @click='createPays()' title="Création">
-                <SaveIcon class="w-6 h-6"/>
-              </button>                  
-        </div>
-        <div class="mt-[5%] overflow-x-auto">
-          <table class="w-fit m-auto">
-            <thead>
-                <tr>
-                  <th scope="col" class="w-[20%] font-210 text-2xl">Id <underline/></th>
-                  <th scope="col" class="w-[20%] font-210 text-2xl">Nom <underline/></th>
-                  <th scope="col" class="w-[20%] font-210 text-2xl">Actions <underline/></th>
+            <div class="mt-[5%] overflow-x-auto">
+            <table class="w-full m-auto">
+                <thead>
+                    <tr>
+                    <th scope="col" class="w-1/3 font-210 text-2xl">Id <underline/></th>
+                    <th scope="col" class="w-1/3 font-210 text-2xl">Nom <underline/></th>
+                    <th scope="col" class="w-1/3 font-210 text-2xl">Actions <underline/></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr v-for='pays in listePays' :key='pays.id'>
+                    <td class="bg-sombre text-white font-cairo font-semibold text-xl text-center">{{pays.id}}</td>
+                    <td>
+                    <input class="bg-sombre text-white font-cairo font-semibold text-xl text-center w-fit md:w-full mx-auto" type='text' v-model='pays.nom' />
+                    </td>
+                    <td class="flex justify-evenly gap-5">
+                    <button class="font-cairo font-semibold text-xl text-center flex gap-2" @click.prevent="updatePays(pays)">
+                        <p class="hidden md:block m-auto italic font-thin">Modifier</p>
+                        <PencilAltIcon class="w-10 h-10"/>
+                    </button>
+                    <button class="font-cairo font-semibold text-xl text-center flex gap-2" @click.prevent="deletePays(pays)">
+                        <p class="hidden md:block m-auto italic text-accent font-thin">Supprimer</p>
+                        <XIcon class="w-10 h-10 text-accent"/>
+                    </button>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-              <tr v-for='pays in listePays' :key='pays.id'>
-                <td class="bg-sombre text-white font-cairo font-semibold text-xl text-center">{{pays.id}}</td>
-                <td>
-                  <input class="w-full bg-sombre text-white font-cairo font-semibold text-xl text-center" type='text' v-model='pays.nom' />
-                </td>
-                <td class="flex justify-evenly">
-                  <button class="font-cairo font-semibold text-xl text-center flex gap-2" @click.prevent="updatePays(pays)">Modifier
-                    <PencilAltIcon class="w-6 h-6"/>
-                  </button>
-                  <button class="font-cairo font-semibold text-xl text-center flex gap-2" @click.prevent="deletePays(pays)">Supprimer
-                    <XIcon class="w-6 h-6"/>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                </tbody>
+            </table>
+            </div>
         </div>
-    </div>
-   </section>
+    </section>
 
     <DDbas class="mt-[100px]"/>
 
