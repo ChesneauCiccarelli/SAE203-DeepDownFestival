@@ -7,7 +7,7 @@
             <img class="flex-auto h-[50px] w-[50px]" src="../public/icons/LogoDDBlanc.jpg" alt="Logo du festival Deep Down" >
           </router-link>
         </div>
-        <MenuButton> <MenuIcon class="inline-block h-[50px] w-[50px]" /><span class="sr-only">Menu</span> </MenuButton>
+        <MenuButton> <menubutton/><span class="sr-only">Menu</span> </MenuButton>
       </div>
 
       <transition class="md:hidden"
@@ -61,9 +61,10 @@
 <script>
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 import { MenuIcon } from "@heroicons/vue/outline";
+import menubutton from "../src/components/bouttons/MenubuttonView.vue"
 import DDbas from "../src/components/FooterView.vue"
 
 export default {
-  components: { MenuIcon, Menu, MenuButton, MenuItems, MenuItem, DDbas },
+  components: { MenuIcon, Menu, MenuButton, MenuItems, MenuItem, DDbas, menubutton },
 };
 </script>
