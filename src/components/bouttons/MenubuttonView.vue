@@ -26,11 +26,18 @@ export default {
 }
 .line {
   fill: none;
-  stroke: white;
+  stroke: #1F1F1F;
   stroke-width: 3;
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media (prefers-color-scheme: dark){
+  .line {
+  stroke: white;
+  }
+}
+
 .line1 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
