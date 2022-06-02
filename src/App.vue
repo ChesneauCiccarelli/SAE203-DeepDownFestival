@@ -2,14 +2,14 @@
 <div>
   <header>
     <Menu>
-      <div class="fixed bg-white dark:bg-sombre w-full z-50 border-b-2 rounded-bl-xl rounded-br-xl border-sombre dark:border-white">
+      <div class="fixed bg-white dark:bg-sombre w-full z-30 border-b-2 rounded-bl-xl rounded-br-xl border-sombre dark:border-white" onclick="anim.classList.remove('opened'), document.body.style.overflow = 'auto'">
         <div class="flex md:hidden m-[5%]">
           <div class="flex-auto">
             <router-link to="/">
-              <img class="flex-auto h-[50px] w-[50px]" src="../public/icons/LogoDDBlanc.jpg" alt="Logo du festival Deep Down" >
+              <img class="flex-auto h-[50px] w-[50px] z-50" src="../public/icons/LogoDDBlanc.jpg" alt="Logo du festival Deep Down" >
             </router-link>
           </div>
-          <MenuButton onclick="document.body.style.overflow = document.body.style.overflow == 'hidden' ? 'auto' : 'hidden'">
+          <MenuButton>
             <div>
               <button id="anim" class="menu flex items-center justify-center h-[50px] w-[50px]" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')), document.body.style.overflow = document.body.style.overflow == 'hidden' ? 'auto' : 'hidden'" aria-label="Main Menu">
                 <svg width="100" height="100" viewBox="0 0 100 100">
@@ -22,7 +22,7 @@
             <span class="sr-only">Menu</span> 
           </MenuButton>
         </div>
-        <div onclick="anim.classList.remove('opened')">
+        <div>
           <transition class="md:hidden h-screen overflow-y-hidden"
             enter-active-class="transition duration-1000 ease-out"
             enter-from-class="transform -translate-x-full"
@@ -31,18 +31,18 @@
             leave-from-class="transform translate-0"
             leave-to-class="transform -translate-x-full"
           >
-            <MenuItems class="flex flex-col gap-[30px] my-[50px] items-center">     
+            <MenuItems class="flex flex-col items-center">     
               <MenuItem class="font-210-box italic text-3xl text-sombre dark:text-white">
-                <router-link to="/festival">LE FESTIVAL </router-link>
+                <router-link to="/festival" class="w-full text-center py-5">LE FESTIVAL </router-link>
               </MenuItem>
               <MenuItem class="font-210-box italic text-3xl text-sombre dark:text-white">
-                <router-link to="/programmation">PROGRAMME </router-link>
+                <router-link to="/programmation" class="w-full text-center py-5">PROGRAMME </router-link>
               </MenuItem>
               <MenuItem class="font-210-box italic text-3xl text-sombre dark:text-white">
-                <router-link to="/artistes">ARTISTES</router-link>
+                <router-link to="/artistes" class="w-full text-center py-5">ARTISTES</router-link>
               </MenuItem>
               <MenuItem>
-                <DDbas/>
+                <DDbas class="pb-[500px]"/>
               </MenuItem>
             </MenuItems>
           </transition>
