@@ -37,33 +37,13 @@
     <div class="flex justify-center items-center self-stretch gap-[50px]">
       <div class="flex flex-col justify-center items-center flex-grow relative">
           <router-link to="/contact" class="z-50 p-5">
-            <p class="font-cairo text-xs font-semibold text-center text-sombre dark:text-white dark:border-b">NOUS CONTACTER</p>
+            <p lass="font-cairo text-xs font-semibold text-center text-sombre border-b-2 border-sombre dark:text-white dark:border-white">NOUS CONTACTER</p>
           </router-link>
-        <svg
-          width="82"
-          height="1"
-          viewBox="0 0 82 1"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <line x1="1.25" y1="0.5" x2="81.25" y2="0.5" stroke="black" stroke-linecap="round"></line>
-        </svg>
       </div>
       <div class="flex flex-col justify-center items-center flex-grow relative">
           <router-link to="/mentions-legales" class="z-50 p-5">
-            <p class="font-cairo text-xs font-semibold text-center text-sombre dark:text-white dark:border-b">MENTIONS LEGALES</p>
+            <p class="font-cairo text-xs font-semibold text-center text-sombre border-b-2 border-sombre dark:text-white dark:border-white">MENTIONS LEGALES</p>
           </router-link>
-        <svg
-          width="82"
-          height="1"
-          viewBox="0 0 82 1"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <line x1="1.25" y1="0.5" x2="81.25" y2="0.5" stroke="black" stroke-linecap="round"></line>
-        </svg>
       </div>
     </div>
 </div>
