@@ -42,7 +42,7 @@
                 <router-link to="/artistes" class="w-full text-center py-5">ARTISTES</router-link>
               </MenuItem>
               <MenuItem>
-                <DDbas class="pb-[500px] z-40"/>
+                <FooterMenu class="pb-[500px] z-0"/>
               </MenuItem>
             </MenuItems>
           </transition>
@@ -79,11 +79,11 @@
 <script>
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 import { MenuIcon } from "@heroicons/vue/outline";
-import DDbas from "../src/components/FooterView.vue"
+import FooterMenu from "../src/components/FooterMenuView.vue"
 
 export default {
 
-  components: { MenuIcon, Menu, MenuButton, MenuItems, MenuItem, DDbas },
+  components: { MenuIcon, Menu, MenuButton, MenuItems, MenuItem, FooterMenu },
 
 }
 </script>
