@@ -36,12 +36,12 @@
 
     <div class="flex justify-center items-center self-stretch gap-[50px]">
       <div class="flex flex-col justify-center items-center flex-grow relative">
-          <router-link to="/contact" class="z-50 p-5">
+          <router-link to="/contact" class="p-5">
             <p class="font-cairo text-xs font-semibold text-center text-sombre border-b-2 border-sombre dark:text-white dark:border-white">NOUS CONTACTER</p>
           </router-link>
       </div>
       <div class="flex flex-col justify-center items-center flex-grow relative">
-          <router-link to="/mentions-legales" class="z-50 p-5">
+          <router-link to="/mentions-legales" class="p-5">
             <p class="font-cairo text-xs font-semibold text-center text-sombre border-b-2 border-sombre dark:text-white dark:border-white">MENTIONS LEGALES</p>
           </router-link>
       </div>
