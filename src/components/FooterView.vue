@@ -36,7 +36,7 @@
 
     <div class="flex justify-center items-center self-stretch gap-[50px]">
       <div class="flex flex-col justify-center items-center flex-grow relative">
-          <router-link to="/contact">
+          <router-link to="/contact" class="z-50 p-5">
             <p class="font-cairo text-xs font-semibold text-center text-sombre dark:text-white dark:border-b">NOUS CONTACTER</p>
           </router-link>
         <svg
@@ -51,7 +51,7 @@
         </svg>
       </div>
       <div class="flex flex-col justify-center items-center flex-grow relative">
-          <router-link to="/mentions-legales">
+          <router-link to="/mentions-legales" class="z-50 p-5">
             <p class="font-cairo text-xs font-semibold text-center text-sombre dark:text-white dark:border-b">MENTIONS LEGALES</p>
           </router-link>
         <svg
