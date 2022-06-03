@@ -42,7 +42,7 @@
                 <router-link to="/artistes" class="w-full text-center py-5">ARTISTES</router-link>
               </MenuItem>
               <MenuItem>
-                <DDbas class="pb-[500px]"/>
+                <DDbas class="pb-[500px] z-50"/>
               </MenuItem>
             </MenuItems>
           </transition>
