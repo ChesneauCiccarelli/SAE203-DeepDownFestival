@@ -60,8 +60,9 @@
 </template>
 
 <script>
+import { MenuItem } from "@headlessui/vue";
 export default {
-
+  components : {MenuItem}
 }
 </script>
 
